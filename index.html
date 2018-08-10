@@ -1,12 +1,211 @@
 <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8">
-    <title>HTML Academy: Девайс</title>
-  </head>
-  <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
-  </body>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Device</title>
+</head>
+<body>
+	<header class="main-header">
+		<h2>Device</h2>
+		<!-- Здесь будет форма -->
+		<!-- user-menu сделал через отдельные списки, так было сказано в лекции, но я не согласен (скорее не понял почему) -->
+		<ul class="user-menu enter">
+			<li><a href="#">Войти</a></li>
+		</ul>
+		<ul class="user-menu compare">
+			<li><a href="#">Сравнить</a></li>
+		</ul>
+		<ul class="user-menu basket">
+			<li><a href="#">Корзина</a></li>
+		</ul>
+		<nav class="main-nav">
+			<ul class="nav-list">
+				<li>
+					<a href="#">Каталог товаров</a>
+				</li>
+				<li>
+					<a href="#">Доставка</a>
+				</li>
+				<li>
+					<a href="#">Гарантия</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<main class="container">
+		<section class="main-items-section">
+			<a href="#" class="main-items">
+				<img src="img/main-items-1.svg" width="100px" height="250px" alt="Селфи палка">
+			</a>
+			<a href="#" class="main-items">
+				<img src="img/main-items-2.svg" width="100px" height="250px" alt="Второй товар">
+			</a>
+			<a href="#" class="main-items">
+				<img src="img/main-items-3.svg" width="100px" height="250px" alt="Третий товар">
+			</a>
+			<p>Делай селфи,<br>как Бен Стиллер</p>
+			<p>Самая длинная палка для селфи доступна в нашем магазине</p>
+			<p>Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+			<a href="#" class="details">Подробнее</a>
+			<!-- Здесь будет форма -->
+			<table>
+				<tr>
+					<th>Длина палки</th>
+					<td>8,5 м</td>
+				</tr>
+				<tr>
+					<th>Вес палки</th>
+					<td>5 кг</td>
+				</tr>
+				<tr>
+					<th>Материал</th>
+					<td>Карбон</td>
+				</tr>
+			</table>
+		</section>
+		<section class="product-sections">
+			<ul class="product-items-section">
+				<li class="product-item">
+					<a href="#">
+						<img src="img/vr.svg" alt="Виртуальная реальность">
+					</a>
+					<h3>Виртуальная реальность</h3>
+				</li>
+				<li class="product-item">
+					<a href="#">
+						<img src="img/monopods.svg" alt="Моноподы для селфи">
+					</a>
+					<h3>Моноподы для селфи</h3>
+				</li>
+				<li class="product-item">
+					<a href="#">
+						<img src="img/actioncamers.svg" alt="Экшн-камеры">
+					</a>
+					<h3>Экшн-камеры</h3>
+				</li>
+				<li class="product-item">
+					<a href="#">
+						<img src="img/fit.svg" alt="Фитнес Фитнес-браслеты">
+					</a>
+					<h3>Фитнес-браслеты</h3>
+				</li>
+				<li class="product-item">
+					<a href="#">
+						<img src="img/watch.svg" alt="Умные часы">
+					</a>
+					<h3>Умные часы</h3>
+				</li>
+				<li class="product-item">
+					<a href="#">
+						<img src="img/dron.svg" alt="Дрон">
+					</a>
+					<h3>Квадрокоптеры</h3>
+				</li>
+			</ul>	
+		</section>
+		<section class="service">
+			<ul class="service-list">
+				<li class="service-list-delivery">
+					<span>Доставка</span>
+				</li>
+				<li class="service-list-guarantee">
+					<span>Гарантия</span>
+				</li>
+				<li class="service-list-credit">
+					<span>Кредит</span>
+				</li>
+			</ul>
+			<h3>Доставка</h3>
+			<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+			<img src="img/delivery.svg" alt="Доставка">
+		</section>
+		<section class="partners">
+			<ul class="partners-list">
+				<li class="partner partner-dji">
+					<a href="http//www.dji.com">
+						<img src="img/dji.svg" alt="dji">
+					</a>
+				</li>
+				<li class="partner partner-spgadgets">
+					<a href="http//www.spgadjets.com">
+						<img src="img/spgadgets.svg" alt="spgadjets">
+					</a>
+				</li>
+				<li class="partner partner-gopro">
+					<a href="http//www.gopro.com">
+						<img src="img/gopro.svg" alt="gopro">
+					</a>
+				</li>
+				<li class="partner partner-vive">
+					<a href="http//www.vive.com">
+						<img src="img/vive.svg" alt="vive">
+					</a>
+				</li>
+			</ul>
+		</section>
+		<section class="about-us">
+			<h3>О нас</h3>
+			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортным компаниями:</p>
+			<ul class="transport-partners">
+				<li class="transport-partners-1">
+					<a href="htpp//www.dellin.ru">Деловые линии</a>
+				</li>
+				<li class="transport-partners-2">
+					<a href="htpp//www.autotrading.ru">Автотрейдинг</a>
+				</li>
+				<li class="transport-partners-3">
+					<a href="htpp//www.jde.ru">ЖелДорЭкспедиция</a>
+				</li>
+			</ul>
+			<a href="#">Подробнее о нас</a>
+		</section>
+		<section class="contacts">
+			<h3>Контакты</h3>
+			<p>Вы можете забрать товар сами, заехав в наш офис.Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+			<!-- Здесь будет форма -->
+			<a href="#">Напишите нам</a>
+		</section>
+	</main>
+	<footer>
+		<h2>Device</h2>
+		<p>г.Москва, ул.Строителей,15</p>
+		<ul class="user-menu enter">
+			<li><a href="#">Войти</a></li>
+		</ul>
+		<ul class="user-menu compare">
+			<li><a href="#">Сравнить</a></li>
+		</ul>
+		<ul class="user-menu basket">
+			<li><a href="#">Корзина</a></li>
+		</ul>
+		<nav class="main-nav">
+			<ul class="nav-list">
+				<li>
+					<a href="#">Доставка</a>
+				</li>
+				<li>
+					<a href="#">Гарантия</a>
+				</li>
+				<li>
+					<a href="#">Контакты</a>
+				</li>
+			</ul>
+		</nav>
+		<span>Тел.: +7(495)495-95-95</span>
+		<div class="footer-social">
+        	<a class="social-button" href="#">Вконтакте</a>
+        	<a class="social-button" href="#">Фейсбук</a>
+       		<a class="social-button" href="#">Инстаграм</a>
+      	</div>
+      	<div class="htmlacademy">
+      		<a class="html-buttom" href="#">htmlacadeny</a>
+      	</div>
+	</footer>
+</body>
 </html>
