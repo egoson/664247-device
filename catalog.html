@@ -8,137 +8,148 @@
 </head>
 <body>
 	<header class="main-header">
-		<a href="index.html" class="button-to-index">Device</a>
-		<!-- Здесь будет форма -->
-		<!-- user-menu сделал через отдельные списки, так было сказано в лекции, но я не согласен (скорее не понял почему) -->
-		<ul class="user-menu profile">
-			<li class="icon-profile">
-				<a href="profile.html"></a>
-			</li>
-			<li>
-				<a href="profile.html">Валентин Петухов</a>
-			</li>	
-		</ul>
-		<ul class="user-menu enter">
-			<li><a href="#">Выйти</a></li>
-		</ul>
-		<ul class="user-menu compare">
-			<li><a href="#">Сравнить</a></li>
-		</ul>
-		<ul class="user-menu basket">
-			<li><a href="#">Корзина</a></li>
-		</ul>
-		<nav class="main-nav">
-			<ul class="nav-list">
-				<li>
-					<a href="#">Каталог товаров</a>
-				</li>
-				<li>
-					<a href="#">Доставка</a>
-				</li>
-				<li>
-					<a href="#">Гарантия</a>
-				</li>
-				<li>
-					<a href="#">Контакты</a>
-				</li>
+		<div class="wrapper-header-catalog wrapper">
+			<a href="index.html" class="button-to-index">Device</a>
+			<!-- Здесь будет форма -->
+			<!-- user-menu сделал через отдельные списки, так было сказано в лекции, но я не согласен (скорее не понял почему) -->
+			<div class="user-menu profile">
+				<a class="profile-link" href="profile.html">Валентин Петухов</a>
+				<a href="#" class="logout-btn"></a>
+			</div>
+			<ul class="user-menu enter">
+				<li><a href="#">Выйти</a></li>
 			</ul>
-		</nav>
+			<ul class="user-menu compare">
+				<li><a href="#">Сравнить</a></li>
+			</ul>
+			<ul class="user-menu basket">
+				<li><a href="#">Корзина</a></li>
+			</ul>
+			<nav class="main-nav">
+				<ul class="nav-list">
+					<li>
+						<a href="#">Каталог товаров</a>
+					</li>
+					<li>
+						<a href="#">Доставка</a>
+					</li>
+					<li>
+						<a href="#">Гарантия</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 	<main class="container">
-		<h1 class="page-titel">Моноподы для селфи</h1>
-		<ul class="breadcrumbs">
-			<li><a href="index.html">Главная</a></li>
-			<li><a href="catalog.html">Каталог товаров</a></li>
-			<li class="breadcrumbs-current">Моноподы для селфи</li>
-		</ul>
-		<section class="filters">
-			<p>Фильтр:</p>
-			<!-- здесь будет форма -->
-
-		</section>
-		<p>Сортировка:</p>
-		<ul class="sorts">
-			<li>
-				По цене
-			</li>
-			<li>
-				По типу
-			</li>
-			<li>
-				По популярности
-			</li>
-		</ul>
-		<!-- тут две стрелочки вверх вниз -->
-		<ul class="catalog-list">
-			<li class="catalog-item">
-				<h3>
-					<a href="catalog-item.html">Любительская селфи-палка</a>
-				</h3>
-				<p class="catalog-item-imge">
-					<a href="catalog-item.html">
-						<img src="Amateur-selfie-stick.svg" alt="Amateur-selfie-stick" width="150px" height="100px">
-					</a>
-				</p>
-				<p class="catalog-item-price">
-					<b>500 руб</b>
-					<a href="#" class="button"></a>
-				</p>
-			</li>
-			<li class="catalog-item">
-				<h3>
-					<a href="catalog-item.html">Проффесиональная селфи-палка</a>
-				</h3>
-				<p class="catalog-item-imge">
-					<a href="catalog-item.html">
-						<img src="Prof-selfie-stick.svg" alt="Prof-selfie-stick" width="150px" height="100px">
-					</a>
-				</p>
-				<p class="catalog-item-price">
-					<b>1500 руб</b>
-					<a href="#" class="button"></a>
-				</p>
-			</li>
-			<li class="catalog-item">
-				<h3>
-					<a href="catalog-item.html">Непотопляемая селфи-палка</a>
-				</h3>
-				<p class="catalog-item-imge">
-					<a href="catalog-item.html">
-						<img src="unsinkable-selfie-stick.svg" alt="unsinkable-selfie-stick" width="150px" height="100px">
-					</a>
-				</p>
-				<p class="catalog-item-price">
-					<b>2500 руб</b>
-					<a href="#" class="button"></a>
-				</p>
-			</li>
-			<li class="catalog-item">
-				<h3>
-					<a href="catalog-item.html">Селфи-палка "Следуй за мной"</a>
-				</h3>
-				<p class="catalog-item-imge">
-					<a href="catalog-item.html">
-						<img src="follow-me-selfie-stick.svg" alt="follow-me-selfie-stick" width="150px" height="100px">
-					</a>
-				</p>
-				<p class="catalog-item-price">
-					<b>4900 руб</b>
-					<a href="#" class="button"></a>
-				</p>
-			</li>
-		</ul>
-		<div class="button-forward">
-			<a href="#">Вперед</a>
+		<div class="wrapper-title wrapper">
+			<h1 class="page-title">Моноподы для селфи</h1>
+			<ul class="breadcrumbs">
+				<li><a href="index.html">Главная</a></li>
+				<li><a href="catalog.html">Каталог товаров</a></li>
+				<li class="breadcrumbs-current">Моноподы для селфи</li>
+			</ul>
 		</div>
-		<ul class="paginator-list">
-			<li class="paginator-item pagination-item-current">1</li>
-			<li class="paginator-item"><a href="#">2</a></li>
-			<li class="paginator-item"><a href="#">3</a></li>
-			
-		</ul>
-		<div class="button-back">
-			<a href="#">Назад</a>
+		<section class="filters">
+			<div class="wrapper-filter wrapper">
+				<p>Фильтр:</p>
+				<!-- здесь будет форма -->
+			</div>
+		</section>
+		<div class="wrapper-sorts wrapper">
+			<p>Сортировка:</p>
+			<ul class="sorts">
+				<li>
+					<span>По цене</span>
+				</li>
+				<li>
+					<span>По типу</span>
+				</li>
+				<li>
+					<span>По популярности</span>
+				</li>
+				<li>
+					<span>∧</span> <!-- эти штуки в css реализуются кажется, и так же пока без класса лишки, пока не могу сообразить в какой класс обернуть -->
+				</li>
+				<li>
+					<span>∨</span>
+				</li>
+			</ul>
+		</div>
+		<div class="wrapper-catalog wrapper">
+			<h2 class="visually-hidden">Каталог товаров</h2> <!-- h2  сделать надо будет скрытно, т.к. имени каталога в макете нет -->
+			<ul class="catalog-list">
+				<li class="catalog-item">
+					<h3> 
+						<a href="catalog-item.html">Любительская селфи-палка</a> 
+						<a href="#" class="price">500 руб</a><!-- не уверен в том, что цену можно в заголовок, прошерстил инет, конкретно про ценник в заголовке ничего не нашел, может неправильно искал, вариант, который был, до этого - подсмотрен в барбершопе -->
+					</h3>
+					<div class="catalog-item-imge">
+						<a href="catalog-item.html">
+							<img src="Amateur-selfie-stick.svg" alt="Amateur-selfie-stick" width="150" height="100">
+						</a>
+					</div>
+					<a href="#" class="interactive-btn-1"></a> <!-- и еще, я чувствую, что пишу корявые названия классов -->
+					<a href="#" class="interactive-btn-2"></a>
+				</li>
+				<li class="catalog-item">
+					<h3>
+						<a href="catalog-item.html">Проффесиональная селфи-палка</a>
+						<a href="#" class="price">1500 руб</a>
+					</h3>
+					<div class="catalog-item-imge">
+						<a href="catalog-item.html">
+							<img src="Prof-selfie-stick.svg" alt="Prof-selfie-stick" width="150" height="100">
+						</a>
+					</div>
+					<a href="#" class="interactive-btn-1"></a>
+					<a href="#" class="interactive-btn-2"></a>
+				</li>
+				<li class="catalog-item">
+					<h3>
+						<a href="catalog-item.html">Непотопляемая селфи-палка</a>
+						<a href="#" class="price">2500 руб</a>
+					</h3>
+					<div class="catalog-item-imge">
+						<a href="catalog-item.html">
+							<img src="unsinkable-selfie-stick.svg" alt="unsinkable-selfie-stick" width="150" height="100">
+						</a>
+					</div>
+					<a href="#" class="interactive-btn-1"></a>
+					<a href="#" class="interactive-btn-2"></a>
+				</li>
+				<li class="catalog-item">
+					<h3>
+						<a href="catalog-item.html">Селфи-палка "Следуй за мной"</a>
+						<a href="#" class="price">4900</a>
+					</h3>
+					<div class="catalog-item-imge">
+						<a href="catalog-item.html">
+							<img src="follow-me-selfie-stick.svg" alt="follow-me-selfie-stick" width="150" height="100">
+						</a>
+					</div>
+					<a href="#" class="interactive-btn-1"></a> 
+					<a href="#" class="interactive-btn-2"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="paginator-block">
+			<div class="wrapper-paginator wrapper">
+				<div class="button-forward">
+					<a href="#">Вперед</a>
+				</div>
+				<ul class="paginator-list">
+					<li class="paginator-item pagination-item-current">1</li>
+					<li class="paginator-item"><a href="#">2</a></li>
+					<li class="paginator-item"><a href="#">3</a></li>
+				
+				</ul>
+				<div class="button-back">
+					<a href="#">Назад</a>
+				</div>
+			</div>
 		</div>
 	</main>
 	<footer>

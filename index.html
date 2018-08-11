@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
@@ -8,204 +7,296 @@
 </head>
 <body>
 	<header class="main-header">
-		<h2>Device</h2>
-		<!-- Здесь будет форма -->
-		<!-- user-menu сделал через отдельные списки, так было сказано в лекции, но я не согласен (скорее не понял почему) -->
-		<ul class="user-menu enter">
-			<li><a href="#">Войти</a></li>
-		</ul>
-		<ul class="user-menu compare">
-			<li><a href="#">Сравнить</a></li>
-		</ul>
-		<ul class="user-menu basket">
-			<li><a href="#">Корзина</a></li>
-		</ul>
-		<nav class="main-nav">
-			<ul class="nav-list">
-				<li>
-					<a href="#">Каталог товаров</a>
-				</li>
-				<li>
-					<a href="#">Доставка</a>
-				</li>
-				<li>
-					<a href="#">Гарантия</a>
-				</li>
-				<li>
-					<a href="#">Контакты</a>
-				</li>
-			</ul>
-		</nav>
+		<div class="wrapper-header wrapper"> <!-- запихал в каждый крупный блок по врапперу, возможно где-то это имя будет не уместно, например, там где надо будет делать серый фон, или там еще добавить надо будет контейнер -->
+			<h1>Device</h1>
+			<div class="user-menu">
+				<!-- Здесь будет форма -->
+				<div class="user-enter"> 
+					<a class="login-btn" href="#">Войти</a>
+				</div>
+				<div class="user-compare-basket"> <!-- я обернул в отдельный див "сравнить" и "корзину", потому-что они немного отдалены от кнопки войти -->
+					<a class="compare-btn" href="#">Сравнить</a>
+					<div class="basket-icons">
+						<a class="basket-btn" href="#">Корзина</a>
+						<a href="#" class="basket-icon"></a>
+					</div>
+				</div>
+			</div>
+			<nav class="main-nav">
+				<ul class="nav-list-item">
+					<li>
+						<a href="#">Каталог товаров</a>
+						<ul class="nav-list-link">
+							<li>
+								<a href="#"></a>
+							</li>
+							<li>
+								<a href="#"></a>
+							</li>
+							<li>
+								<a href="#"></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#">Доставка</a>
+					</li>
+					<li>
+						<a href="#">Гарантия</a>
+					</li>
+					<li>
+						<a href="#">Контакты</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
 	</header>
 	<main class="container">
 		<section class="main-items-section">
-			<a href="catalog-item.html" class="main-items">
-				<img src="img/main-items-1.svg" width="100px" height="250px" alt="Селфи палка">
-			</a>
-			<a href="catalog-item.html" class="main-items">
-				<img src="img/main-items-2.svg" width="100px" height="250px" alt="Второй товар">
-			</a>
-			<a href="catalog-item.html" class="main-items">
-				<img src="img/main-items-3.svg" width="100px" height="250px" alt="Третий товар">
-			</a>
-			<p>Делай селфи,<br>как Бен Стиллер</p>
-			<p>Самая длинная палка для селфи доступна в нашем магазине</p>
-			<p>Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-			<a href="catalog-item.html" class="details">Подробнее</a>
-			<!-- Здесь будет форма -->
-			<table>
-				<tr>
-					<th>Длина палки</th>
-					<td>8,5 м</td>
-				</tr>
-				<tr>
-					<th>Вес палки</th>
-					<td>5 кг</td>
-				</tr>
-				<tr>
-					<th>Материал</th>
-					<td>Карбон</td>
-				</tr>
-			</table>
+			<div class="wrapper-items wrapper">
+				<div class="main-items main-items-1">
+					<img src="img/main-items-1.svg" width="100" height="250" alt="Селфи палка">
+					<div class="title-text"> <!-- не могу придумать нормальное имя класса -->
+						<p>Делай селфи,<br>как Бен Стиллер</p>
+					</div>
+					<div class="title-text-1"> <!-- ну это уже никуда не годится -->
+						<p>Самая длинная палка для селфи доступна в нашем магазине</p>
+						<p>Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+					</div>
+				<a href="catalog-item.html" class="details">Подробнее</a>
+				<table>
+					<tr>
+						<th>Длина палки</th>
+						<td>8,5 м</td>
+					</tr>
+					<tr>
+						<th>Вес палки</th>
+						<td>5 кг</td>
+					</tr>
+					<tr>
+						<th>Материал</th>
+						<td>Карбон</td>
+					</tr>
+				</table>
+				</div>
+				<div class="main-items main-items-2">
+					<img src="img/main-items-2.svg" width="100" height="250" alt="Третий товар">
+					<div class="title-text"> <!-- не могу придумать нормальное имя класса -->
+						<p>Худеем<br>правильно!</p>
+					</div>
+					<div class="title-text-1"> <!-- ну это уже никуда не годится -->
+						<p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
+					</div>
+					<a href="catalog-item.html" class="details">Подробнее</a>
+					<table>
+						<tr>
+							<th>Длина палки</th>
+							<td>8,5 м</td>
+						</tr>
+						<tr>
+							<th>Вес палки</th>
+							<td>5 кг</td>
+						</tr>
+						<tr>
+							<th>Материал</th>
+							<td>Карбон</td>
+						</tr>
+					</table>
+				</div>
+				<div class="main-items main-items-3">
+					<img src="img/main-items-3.svg" width="100" height="250" alt="Второй товар">
+					<div class="title-text"> <!-- не могу придумать нормальное имя класса -->
+						<p>Порхает как бабочка,<br>жалит как пчела</p>
+					</div>
+					<div class="title-text-1"> <!-- ну это уже никуда не годится -->
+						<p>Это обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
+					</div>
+					<a href="catalog-item.html" class="details">Подробнее</a>
+					<table>
+						<tr>
+							<th>Дальность полета</th>
+							<td>800 м</td>
+						</tr>
+						<tr>
+							<th>Радиус поражения</th>
+							<td>50 м</td>
+						</tr>
+					</table>
+				</div>
+			</div>
 		</section>
 		<section class="product-sections">
-			<ul class="product-items-section">
-				<li class="product-item">
-					<a href="catalog-item.html">
-						<img src="img/vr.svg" alt="Виртуальная реальность">
-					</a>
-					<h3>Виртуальная реальность</h3>
-				</li>
-				<li class="product-item">
-					<a href="catalog-item.html">
-						<img src="img/monopods.svg" alt="Моноподы для селфи">
-					</a>
-					<h3>Моноподы для селфи</h3>
-				</li>
-				<li class="product-item">
-					<a href="catalog-item.html">
-						<img src="img/actioncamers.svg" alt="Экшн-камеры">
-					</a>
-					<h3>Экшн-камеры</h3>
-				</li>
-				<li class="product-item">
-					<a href="catalog-item.html">
-						<img src="img/fit.svg" alt="Фитнес Фитнес-браслеты">
-					</a>
-					<h3>Фитнес-браслеты</h3>
-				</li>
-				<li class="product-item">
-					<a href="catalog-item.html">
-						<img src="img/watch.svg" alt="Умные часы">
-					</a>
-					<h3>Умные часы</h3>
-				</li>
-				<li class="product-item">
-					<a href="catalog-item.html">
-						<img src="img/dron.svg" alt="Дрон">
-					</a>
-					<h3>Квадрокоптеры</h3>
-				</li>
-			</ul>	
+			<div class="wrapper-items-section wrapper">
+				<ul class="product-items-section">
+					<li class="product-item product-item-vr">
+						<a href="catalog-item-vr.html">
+							<img src="img/vr.svg" width="50" height="150" alt="Виртуальная реальность">
+						</a>
+						<h3>Виртуальная реальность</h3>
+					</li>
+					<li class="product-item product-item-monopods">
+						<a href="catalog-item-monopods.html">
+							<img src="img/monopods.svg" width="50" height="150" alt="Моноподы для селфи">
+						</a>
+						<h3>Моноподы для селфи</h3>
+					</li>
+					<li class="product-item product-item-actioncamers">
+						<a href="catalog-item-actioncamers.html">
+							<img src="img/actioncamers.svg" width="50" height="150" alt="Экшн-камеры">
+						</a>
+						<h3>Экшн-камеры</h3>
+					</li>
+					<li class="product-item product-item-fit">
+						<a href="catalog-item-fit.html">
+							<img src="img/fit.svg" width="50" height="150" alt="Фитнес Фитнес-браслеты">
+						</a>
+						<h3>Фитнес-браслеты</h3>
+					</li>
+					<li class="product-item product-item-watch">
+						<a href="catalog-item-watch.html">
+							<img src="img/watch.svg" width="50" height="150" alt="Умные часы">
+						</a>
+						<h3>Умные часы</h3>
+					</li>
+					<li class="product-item product-item-dron">
+						<a href="catalog-item-dron.html">
+							<img src="img/dron.svg" width="50" height="150" alt="Дрон">
+						</a>
+						<h3>Квадрокоптеры</h3>
+					</li>
+				</ul>
+			</div>	
 		</section>
 		<section class="service">
-			<ul class="service-list">
-				<li class="service-list-delivery">
-					<span>Доставка</span>
-				</li>
-				<li class="service-list-guarantee">
-					<span>Гарантия</span>
-				</li>
-				<li class="service-list-credit">
-					<span>Кредит</span>
-				</li>
-			</ul>
-			<h3>Доставка</h3>
-			<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-			<img src="img/delivery.svg" alt="Доставка">
+			<div class="wrapper-service wrapper">
+				<ul class="service-list">
+					<li class="service-list-delivery">
+						<span>Доставка</span>
+					</li>
+					<li class="service-list-guarantee">
+						<span>Гарантия</span>
+					</li>
+					<li class="service-list-credit">
+						<span>Кредит</span>
+					</li>
+				</ul>
+				<div class="delivery-slide">
+					<h3>Доставка</h3>
+					<p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же</p>
+					<img src="img/delivery.svg" alt="Доставка">
+				</div>
+				<div class="guarantee-slide">
+					<h3>Гарантия</h3>
+					<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+					<img src="img/guarantee.svg" alt="Гарантия">
+				</div>
+				<div class="credit-slide">
+					<h3>Кредит</h3>
+					<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+					<img src="img/credit.svg" alt="Кредит">
+				</div>
+			</div>
 		</section>
 		<section class="partners">
-			<ul class="partners-list">
-				<li class="partner partner-dji">
-					<a href="http//www.dji.com">
-						<img src="img/dji.svg" alt="dji">
-					</a>
-				</li>
-				<li class="partner partner-spgadgets">
-					<a href="http//www.spgadjets.com">
-						<img src="img/spgadgets.svg" alt="spgadjets">
-					</a>
-				</li>
-				<li class="partner partner-gopro">
-					<a href="http//www.gopro.com">
-						<img src="img/gopro.svg" alt="gopro">
-					</a>
-				</li>
-				<li class="partner partner-vive">
-					<a href="http//www.vive.com">
-						<img src="img/vive.svg" alt="vive">
-					</a>
-				</li>
-			</ul>
+			<div class="wrapper-partners wrapper">
+				<ul class="partners-list">
+					<li class="partner">
+						<a href="http//www.dji.com">
+							<img src="img/dji.svg" width="50" height="50" alt="dji">
+						</a>
+					</li>
+					<li class="partner">
+						<a href="http//www.spgadjets.com">
+							<img src="img/spgadgets.svg" width="50" height="50" alt="spgadjets">
+						</a>
+					</li>
+					<li class="partner">
+						<a href="http//www.gopro.com">
+							<img src="img/gopro.svg" width="50" height="50" alt="gopro">
+						</a>
+					</li>
+					<li class="partner">
+						<a href="http//www.vive.com">
+							<img src="img/vive.svg" width="50" height="50" alt="vive">
+						</a>
+					</li>
+				</ul>
+			</div>
 		</section>
 		<section class="about-us">
-			<h3>О нас</h3>
-			<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-			<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортным компаниями:</p>
-			<ul class="transport-partners">
-				<li class="transport-partners-1">
-					<a href="htpp//www.dellin.ru">Деловые линии</a>
-				</li>
-				<li class="transport-partners-2">
-					<a href="htpp//www.autotrading.ru">Автотрейдинг</a>
-				</li>
-				<li class="transport-partners-3">
-					<a href="htpp//www.jde.ru">ЖелДорЭкспедиция</a>
-				</li>
-			</ul>
-			<a href="#">Подробнее о нас</a>
+			<div class="wrapper-about-us wrapper">
+				<h3>О нас</h3>
+				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортным компаниями:</p>
+				<ul class="transport-partners">
+					<li class="transport-partners-1">
+						<a href="htpp//www.dellin.ru">Деловые линии</a>
+					</li>
+					<li class="transport-partners-2">
+						<a href="htpp//www.autotrading.ru">Автотрейдинг</a>
+					</li>
+					<li class="transport-partners-3">
+						<a href="htpp//www.jde.ru">ЖелДорЭкспедиция</a>
+					</li>
+				</ul>
+				<a href="#">Подробнее о нас</a>
+			</div>
 		</section>
 		<section class="contacts">
-			<h3>Контакты</h3>
-			<p>Вы можете забрать товар сами, заехав в наш офис.Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-			<!-- Здесь будет форма -->
-			<a href="index.html">Напишите нам</a>
+			<div class="wrapper-contacts wrapper">
+				<h3>Контакты</h3>
+				<p>Вы можете забрать товар сами, заехав в наш офис.Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+				<div class="map"></div>
+				<a href="index.html">Напишите нам</a>
+			</div>
 		</section>
 	</main>
 	<footer>
-		<h2>Device</h2>
-		<p>г.Москва, ул.Строителей,15</p>
-		<ul class="user-menu enter">
-			<li><a href="#">Войти</a></li>
-		</ul>
-		<ul class="user-menu compare">
-			<li><a href="#">Сравнить</a></li>
-		</ul>
-		<ul class="user-menu basket">
-			<li><a href="#">Корзина</a></li>
-		</ul>
-		<nav class="main-nav">
-			<ul class="nav-list">
-				<li>
-					<a href="#">Доставка</a>
-				</li>
-				<li>
-					<a href="#">Гарантия</a>
-				</li>
-				<li>
-					<a href="#">Контакты</a>
-				</li>
-			</ul>
-		</nav>
-		<span>Тел.: +7(495)495-95-95</span>
-		<div class="footer-social">
-        	<a class="social-button" href="#">Вконтакте</a>
-        	<a class="social-button" href="#">Фейсбук</a>
-       		<a class="social-button" href="#">Инстаграм</a>
-      	</div>
-      	<div class="htmlacademy">
-      		<a class="html-buttom" href="https://htmlacademy.ru/intensive/htmlcss">htmlacadeny</a>
-      	</div>
+		<div class="wrapper-footer wrapper">
+			<div class="footer-first-line"> <!-- опять сложность с именем, выбрал горизонтальную разметку из предложенных вариантов -->
+				<h1>Device</h1>
+				<div class="user-menu">
+					<div class="user-enter"> 
+						<a class="login-btn" href="#">Войти</a>
+					</div>
+					<div class="user-compare-basket">
+						<a class="compare-btn" href="#">Сравнить</a>
+						<div class="basket-icons">
+							<a class="basket-btn" href="#">Корзина</a>
+							<a href="#" class="basket-icon"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer-second-line">
+				<p>г.Москва, ул.Строителей,15</p>
+				<nav class="main-nav">
+					<ul class="nav-list">
+						<li>
+							<a href="#">Доставка</a>
+						</li>
+						<li>
+							<a href="#">Гарантия</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</nav>
+				<a href="tel:+7(495)495-95-95">Тел.: +7(495)495-95-95</a> <!-- так ?-->
+			</div>
+			<div class="footer-third-line">
+				<span class="decorate-line"></span>
+				<div class="footer-social">
+		        	<a class="social-button" href="#">Вконтакте</a>
+		        	<a class="social-button" href="#">Фейсбук</a>
+		       		<a class="social-button" href="#">Инстаграм</a>
+		      	</div>
+		      	<div class="htmlacademy">
+		      		<a class="html-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
+		      	</div>
+		  	</div>
+	    </div>
 	</footer>
 </body>
 </html>
