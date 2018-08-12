@@ -11,50 +11,56 @@
 			<h1>Device</h1>
 			<div class="user-menu">
 				<!-- Здесь будет форма -->
-				<div class="user-enter"> 
-					<a class="login-btn" href="#">Войти</a>
-				</div>
-				<div class="user-compare-basket"> <!-- я обернул в отдельный див "сравнить" и "корзину", потому-что они немного отдалены от кнопки войти -->
-					<a class="compare-btn" href="#">Сравнить</a>
-					<div class="basket-icons">
-						<a class="basket-btn" href="#">Корзина</a>
-						<a href="#" class="basket-icon"></a>
-					</div>
-				</div>
+				<a class="user-menu-item login-btn" href="#"><span class="icon login-icon"></span>Войти</a>
+				<a class="user-menu-item compare-btn" href="#"><span class="icon compare-icon"></span>Сравнить</a>
+				<a class="user-menu-item basket-btn" href="#"><span class="icon basket-icon"></span>>Корзина</a>
 			</div>
 			<nav class="main-nav">
 				<ul class="nav-list-item">
 					<li>
-						<a href="#">Каталог товаров</a>
-						<ul class="nav-list-link">
+						<a class="nav-list-link" href="#">Каталог товаров</a> <!-- Выпадающим(class="nav-list-inner") и внешним (class="nav-list-link" может надо было class="nav-list-out" ? ) ссылкам добавил отдельные классы  -->
+						<ul class="nav-list-items">
 							<li>
-								<a href="#"></a>
+								<a class="nav-list-inner" href="#">Виртуальная реальность</a>
 							</li>
 							<li>
-								<a href="#"></a>
+								<a class="nav-list-inner" href="#">Моноподы для селфи</a>
 							</li>
 							<li>
-								<a href="#"></a>
+								<a class="nav-list-inner" href="#">Экшн-камеры</a>
+							</li>
+						</ul>
+						<ul class="nav-list-items">
+							<li>
+								<a class="nav-list-inner" href="#">Фитнес браслеты</a>
+							</li>
+							<li>
+								<a class="nav-list-inner" href="#">Умные часы</a>
+							</li>
+						</ul>
+						<ul class="nav-list-items">
+							<li>
+								<a class="nav-list-inner" href="#">Квадрокоптеры</a>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href="#">Доставка</a>
+						<a class="nav-list-link" href="#">Доставка</a>
 					</li>
 					<li>
-						<a href="#">Гарантия</a>
+						<a class="nav-list-link" href="#">Гарантия</a>
 					</li>
 					<li>
-						<a href="#">Контакты</a>
+						<a class="nav-list-link" href="#">Контакты</a>
 					</li>
 				</ul>
 			</nav>
 		</div>
 	</header>
 	<main class="container">
-		<section class="main-items-section">
-			<div class="wrapper-items wrapper">
-				<div class="main-items main-items-1">
+		<section class="promo-slider">
+			<div class="promo-slider-wrapper wrapper">
+				<div class="promo-slides promo-slide-1">
 					<img src="img/main-items-1.svg" width="100" height="250" alt="Селфи палка">
 					<div class="title-text"> <!-- не могу придумать нормальное имя класса -->
 						<p>Делай селфи,<br>как Бен Стиллер</p>
@@ -63,7 +69,7 @@
 						<p>Самая длинная палка для селфи доступна в нашем магазине</p>
 						<p>Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 					</div>
-				<a href="catalog-item.html" class="details">Подробнее</a>
+				<a href="catalog-item.html" class="promo-link">Подробнее</a>
 				<table>
 					<tr>
 						<th>Длина палки</th>
@@ -79,15 +85,15 @@
 					</tr>
 				</table>
 				</div>
-				<div class="main-items main-items-2">
-					<img src="img/main-items-2.svg" width="100" height="250" alt="Третий товар">
-					<div class="title-text"> <!-- не могу придумать нормальное имя класса -->
+				<div class="promo-slides promo-slide-2">
+					<img src="img/main-items-2.svg" width="100" height="250" alt="Фитнес-браслеты">
+					<div class="title-text"> 
 						<p>Худеем<br>правильно!</p>
 					</div>
-					<div class="title-text-1"> <!-- ну это уже никуда не годится -->
+					<div class="title-text-1"> 
 						<p>Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
 					</div>
-					<a href="catalog-item.html" class="details">Подробнее</a>
+					<a href="catalog-item.html" class="promo-link">Подробнее</a>
 					<table>
 						<tr>
 							<th>Длина палки</th>
@@ -103,15 +109,15 @@
 						</tr>
 					</table>
 				</div>
-				<div class="main-items main-items-3">
-					<img src="img/main-items-3.svg" width="100" height="250" alt="Второй товар">
-					<div class="title-text"> <!-- не могу придумать нормальное имя класса -->
+				<div class="promo-slides promo-slide-3">
+					<img src="img/main-items-3.svg" width="100" height="250" alt="Дрон">
+					<div class="title-text"> 
 						<p>Порхает как бабочка,<br>жалит как пчела</p>
 					</div>
-					<div class="title-text-1"> <!-- ну это уже никуда не годится -->
+					<div class="title-text-1"> 
 						<p>Это обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
 					</div>
-					<a href="catalog-item.html" class="details">Подробнее</a>
+					<a href="catalog-item.html" class="promo-link">Подробнее</a>
 					<table>
 						<tr>
 							<th>Дальность полета</th>
@@ -126,71 +132,78 @@
 			</div>
 		</section>
 		<section class="product-sections">
-			<div class="wrapper-items-section wrapper">
+			<div class="product-section-wrapper wrapper">
 				<ul class="product-items-section">
 					<li class="product-item product-item-vr">
-						<a href="catalog-item-vr.html">
-							<img src="img/vr.svg" width="50" height="150" alt="Виртуальная реальность">
-						</a>
-						<h3>Виртуальная реальность</h3>
+						<h3>Виртуальная реальность
+							<a href="catalog-item-vr.html">
+								<img src="img/vr.svg" width="50" height="150" alt="Виртуальная реальность">
+							</a>
+						</h3>
 					</li>
 					<li class="product-item product-item-monopods">
-						<a href="catalog-item-monopods.html">
-							<img src="img/monopods.svg" width="50" height="150" alt="Моноподы для селфи">
-						</a>
-						<h3>Моноподы для селфи</h3>
+						<h3>Моноподы для селфи
+							<a href="catalog-item-monopods.html">
+								<img src="img/monopods.svg" width="50" height="150" alt="Моноподы для селфи">
+							</a>
+						</h3>
 					</li>
 					<li class="product-item product-item-actioncamers">
-						<a href="catalog-item-actioncamers.html">
-							<img src="img/actioncamers.svg" width="50" height="150" alt="Экшн-камеры">
-						</a>
-						<h3>Экшн-камеры</h3>
+						<h3>Экшн-камеры
+							<a href="catalog-item-actioncamers.html">
+								<img src="img/actioncamers.svg" width="50" height="150" alt="Экшн-камеры">
+							</a>
+						</h3>
 					</li>
 					<li class="product-item product-item-fit">
-						<a href="catalog-item-fit.html">
-							<img src="img/fit.svg" width="50" height="150" alt="Фитнес Фитнес-браслеты">
-						</a>
-						<h3>Фитнес-браслеты</h3>
+						<h3>Фитнес-браслеты
+							<a href="catalog-item-fit.html">
+								<img src="img/fit.svg" width="50" height="150" alt="Фитнес-браслеты">
+							</a>
+						</h3>
 					</li>
 					<li class="product-item product-item-watch">
-						<a href="catalog-item-watch.html">
-							<img src="img/watch.svg" width="50" height="150" alt="Умные часы">
-						</a>
-						<h3>Умные часы</h3>
+						<h3>Умные часы
+							<a href="catalog-item-watch.html">
+								<img src="img/watch.svg" width="50" height="150" alt="Умные часы">
+							</a>
+						</h3>
 					</li>
 					<li class="product-item product-item-dron">
-						<a href="catalog-item-dron.html">
-							<img src="img/dron.svg" width="50" height="150" alt="Дрон">
-						</a>
-						<h3>Квадрокоптеры</h3>
+						<h3>Квадрокоптеры
+							<a href="catalog-item-dron.html">
+								<img src="img/dron.svg" width="50" height="150" alt="Дрон">
+							</a>
+						</h3>
 					</li>
 				</ul>
 			</div>	
 		</section>
 		<section class="service">
+			<h2 class="visually-hidden">Сервис</h2>
 			<div class="wrapper-service wrapper">
 				<ul class="service-list">
-					<li class="service-list-delivery">
+					<li class="service-list-btn">
 						<span>Доставка</span>
 					</li>
-					<li class="service-list-guarantee">
+					<li class="service-list-btn">
 						<span>Гарантия</span>
 					</li>
-					<li class="service-list-credit">
+					<li class="service-list-btn">
 						<span>Кредит</span>
 					</li>
 				</ul>
-				<div class="delivery-slide">
+				<div class="service-slide">
 					<h3>Доставка</h3>
 					<p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же</p>
 					<img src="img/delivery.svg" alt="Доставка">
 				</div>
-				<div class="guarantee-slide">
+				<div class="service-slide">
 					<h3>Гарантия</h3>
 					<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
 					<img src="img/guarantee.svg" alt="Гарантия">
 				</div>
-				<div class="credit-slide">
+				<div class="service-slide">
 					<h3>Кредит</h3>
 					<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
 					<img src="img/credit.svg" alt="Кредит">
@@ -229,13 +242,13 @@
 				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортным компаниями:</p>
 				<ul class="transport-partners">
-					<li class="transport-partners-1">
+					<li class="transport-partners-slide">
 						<a href="htpp//www.dellin.ru">Деловые линии</a>
 					</li>
-					<li class="transport-partners-2">
+					<li class="transport-partners-slide">
 						<a href="htpp//www.autotrading.ru">Автотрейдинг</a>
 					</li>
-					<li class="transport-partners-3">
+					<li class="transport-partners-slide">
 						<a href="htpp//www.jde.ru">ЖелДорЭкспедиция</a>
 					</li>
 				</ul>
@@ -253,22 +266,16 @@
 	</main>
 	<footer>
 		<div class="wrapper-footer wrapper">
-			<div class="footer-first-line"> <!-- опять сложность с именем, выбрал горизонтальную разметку из предложенных вариантов -->
+			<div class="footer-row">
 				<h1>Device</h1>
 				<div class="user-menu">
-					<div class="user-enter"> 
-						<a class="login-btn" href="#">Войти</a>
-					</div>
-					<div class="user-compare-basket">
-						<a class="compare-btn" href="#">Сравнить</a>
-						<div class="basket-icons">
-							<a class="basket-btn" href="#">Корзина</a>
-							<a href="#" class="basket-icon"></a>
-						</div>
-					</div>
-				</div>
+				<!-- Здесь будет форма -->
+				<a class="user-menu-item login-btn" href="#"><span class="icon login-icon"></span>Войти</a>
+				<a class="user-menu-item compare-btn" href="#"><span class="icon compare-icon"></span>Сравнить</a>
+				<a class="user-menu-item basket-btn" href="#"><span class="icon basket-icon"></span>>Корзина</a>
 			</div>
-			<div class="footer-second-line">
+			</div>
+			<div class="footer-row">
 				<p>г.Москва, ул.Строителей,15</p>
 				<nav class="main-nav">
 					<ul class="nav-list">
@@ -283,10 +290,9 @@
 						</li>
 					</ul>
 				</nav>
-				<a href="tel:+7(495)495-95-95">Тел.: +7(495)495-95-95</a> <!-- так ?-->
+				<a href="tel:+7(495)495-95-95">Тел.: +7(495)495-95-95</a>
 			</div>
-			<div class="footer-third-line">
-				<span class="decorate-line"></span>
+			<div class="footer-row">
 				<div class="footer-social">
 		        	<a class="social-button" href="#">Вконтакте</a>
 		        	<a class="social-button" href="#">Фейсбук</a>

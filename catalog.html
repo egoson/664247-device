@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html>
 <head>
 	<meta charset="utf-8">
@@ -60,20 +59,22 @@
 		</section>
 		<div class="wrapper-sorts wrapper">
 			<p>Сортировка:</p>
-			<ul class="sorts">
-				<li>
+			<ul class="subject-sort">
+				<li class="subject-sort-item">
 					<span>По цене</span>
 				</li>
-				<li>
+				<li class="subject-sort-item">
 					<span>По типу</span>
 				</li>
-				<li>
+				<li class="subject-sort-item">
 					<span>По популярности</span>
 				</li>
-				<li>
-					<span>∧</span> <!-- эти штуки в css реализуются кажется, и так же пока без класса лишки, пока не могу сообразить в какой класс обернуть -->
+			</ul>
+			<ul class="direction-sort ">
+				<li class="direction-sort-item">
+					<span>∧</span>
 				</li>
-				<li>
+				<li class="direction-sort-item">
 					<span>∨</span>
 				</li>
 			</ul>
@@ -82,88 +83,74 @@
 			<h2 class="visually-hidden">Каталог товаров</h2> <!-- h2  сделать надо будет скрытно, т.к. имени каталога в макете нет -->
 			<ul class="catalog-list">
 				<li class="catalog-item">
-					<h3> 
-						<a href="catalog-item.html">Любительская селфи-палка</a> 
-						<a href="#" class="price">500 руб</a><!-- не уверен в том, что цену можно в заголовок, прошерстил инет, конкретно про ценник в заголовке ничего не нашел, может неправильно искал, вариант, который был, до этого - подсмотрен в барбершопе -->
-					</h3>
-					<div class="catalog-item-imge">
-						<a href="catalog-item.html">
-							<img src="Amateur-selfie-stick.svg" alt="Amateur-selfie-stick" width="150" height="100">
-						</a>
+					<div class="catalog-item-inner">
+						<h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
+						<span>500 руб</span>
 					</div>
-					<a href="#" class="interactive-btn-1"></a> <!-- и еще, я чувствую, что пишу корявые названия классов -->
-					<a href="#" class="interactive-btn-2"></a>
+					<a class="catalog-item-img" href="catalog-item.html">
+						<img src="Amateur-selfie-stick.svg" alt="Amateur-selfie-stick" width="150" height="100">
+					</a>
+					<a href="#" class="catalog-item-order"></a>
+					<a href="#" class="catalog-item-compare"></a>
 				</li>
 				<li class="catalog-item">
-					<h3>
-						<a href="catalog-item.html">Проффесиональная селфи-палка</a>
-						<a href="#" class="price">1500 руб</a>
-					</h3>
-					<div class="catalog-item-imge">
-						<a href="catalog-item.html">
-							<img src="Prof-selfie-stick.svg" alt="Prof-selfie-stick" width="150" height="100">
-						</a>
+					<div class="catalog-item-inner">
+						<h3><a href="catalog-item.html">Проффесиональная селфи-палка</a></h3>
+						<span>1500 руб</span>
 					</div>
-					<a href="#" class="interactive-btn-1"></a>
-					<a href="#" class="interactive-btn-2"></a>
+					<a class="catalog-item-img" href="catalog-item.html">
+						<img src="Prof-selfie-stick.svg" alt="Prof-selfie-stick" width="150" height="100">
+					</a>
+					<a href="#" class="catalog-item-order"></a>
+					<a href="#" class="catalog-item-compare"></a>
 				</li>
 				<li class="catalog-item">
-					<h3>
-						<a href="catalog-item.html">Непотопляемая селфи-палка</a>
-						<a href="#" class="price">2500 руб</a>
-					</h3>
-					<div class="catalog-item-imge">
-						<a href="catalog-item.html">
-							<img src="unsinkable-selfie-stick.svg" alt="unsinkable-selfie-stick" width="150" height="100">
-						</a>
+					<div class="catalog-item-inner">
+						<h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
+						<span>2500 руб</span>
 					</div>
-					<a href="#" class="interactive-btn-1"></a>
-					<a href="#" class="interactive-btn-2"></a>
+					<a class="catalog-item-img" href="catalog-item.html">
+						<img src="unsinkable-selfie-stick.svg" alt="unsinkable-selfie-stick" width="150" height="100">
+					</a>
+					<a href="#" class="catalog-item-order"></a>
+					<a href="#" class="catalog-item-compare"></a>
 				</li>
 				<li class="catalog-item">
-					<h3>
-						<a href="catalog-item.html">Селфи-палка "Следуй за мной"</a>
-						<a href="#" class="price">4900</a>
-					</h3>
-					<div class="catalog-item-imge">
-						<a href="catalog-item.html">
-							<img src="follow-me-selfie-stick.svg" alt="follow-me-selfie-stick" width="150" height="100">
-						</a>
+					<div class="catalog-item-inner">
+						<h3><a href="catalog-item.html">Селфи-палка "Следуй за мной"</a></h3>
+						<span>4900 руб</span>
 					</div>
-					<a href="#" class="interactive-btn-1"></a> 
-					<a href="#" class="interactive-btn-2"></a>
+					<a class="catalog-item-img" href="catalog-item.html">
+						<img src="follow-me-selfie-stick.svg" alt="follow-me-selfie-stick" width="150" height="100">
+					</a>
+					<a href="#" class="catalog-item-order"></a> 
+					<a href="#" class="catalog-item-compare"></a>
 				</li>
 			</ul>
 		</div>
-		<div class="paginator-block">
-			<div class="wrapper-paginator wrapper">
-				<div class="button-forward">
-					<a href="#">Вперед</a>
-				</div>
-				<ul class="paginator-list">
-					<li class="paginator-item pagination-item-current">1</li>
-					<li class="paginator-item"><a href="#">2</a></li>
-					<li class="paginator-item"><a href="#">3</a></li>
-				
-				</ul>
-				<div class="button-back">
-					<a href="#">Назад</a>
-				</div>
+		<div class="wrapper-paginator wrapper">
+			<div class="button-forward">
+				<a href="#">Вперед</a>
+			</div>
+			<ul class="paginator-list">
+				<li class="paginator-item pagination-item-current">1</li>
+				<li class="paginator-item"><a href="#">2</a></li>
+				<li class="paginator-item"><a href="#">3</a></li>
+			</ul>
+			<div class="button-back">
+				<a href="#">Назад</a>
 			</div>
 		</div>
 	</main>
 	<footer>
 		<h2>Device</h2>
 		<p>г.Москва, ул.Строителей,15</p>
-		<ul class="user-menu enter">
-			<li><a href="#">Войти</a></li>
-		</ul>
-		<ul class="user-menu compare">
-			<li><a href="#">Сравнить</a></li>
-		</ul>
-		<ul class="user-menu basket">
-			<li><a href="#">Корзина</a></li>
-		</ul>
+		<div class="user-menu">
+				<!-- Здесь будет форма -->
+				<a class="login-btn" href="#"><span class="icon login-icon"></span>Войти</a>
+				<a class="compare-btn" href="#"><span class="icon compare-icon"></span>Сравнить</a>
+				<a class="basket-btn" href="#"><span class="icon basket-icon"></span>>Корзина</a>
+			</div>
 		<nav class="main-nav">
 			<ul class="nav-list">
 				<li>
