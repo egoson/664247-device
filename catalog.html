@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="style.css">
@@ -7,36 +7,50 @@
 </head>
 <body>
 	<header class="main-header">
-		<div class="wrapper-header-catalog wrapper">
-			<a href="index.html" class="button-to-index">Device</a>
-			<!-- Здесь будет форма -->
-			<!-- user-menu сделал через отдельные списки, так было сказано в лекции, но я не согласен (скорее не понял почему) -->
-			<div class="user-menu profile">
-				<a class="profile-link" href="profile.html">Валентин Петухов</a>
-				<a href="#" class="logout-btn"></a>
+		<div class="wrapper-header wrapper"> <!-- запихал в каждый крупный блок по врапперу, возможно где-то это имя будет не уместно, например, там где надо будет делать серый фон, или там еще добавить надо будет контейнер -->
+			<h1>Device</h1>
+			<div class="user-menu">
+				<!-- Здесь будет форма -->
+				<div class="user-menu-item">
+					<a class="profile-link profile-btn" href="profile.html">Валентин Петухов</a>
+					<a href="#" class="logout-btn"></a>
+				</div>
+				<a class="user-menu-item compare-btn" href="#"><span class="icon compare-icon"></span>Сравнить</a>
+				<a class="user-menu-item basket-btn" href="#"><span class="icon basket-icon"></span>>Корзина</a>
 			</div>
-			<ul class="user-menu enter">
-				<li><a href="#">Выйти</a></li>
-			</ul>
-			<ul class="user-menu compare">
-				<li><a href="#">Сравнить</a></li>
-			</ul>
-			<ul class="user-menu basket">
-				<li><a href="#">Корзина</a></li>
-			</ul>
 			<nav class="main-nav">
 				<ul class="nav-list">
-					<li>
-						<a href="#">Каталог товаров</a>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Каталог товаров</a>
+						<ul class="subnav-list">
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Виртуальная реальность</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Моноподы для селфи</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Экшн-камеры</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Фитнес браслеты</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Умные часы</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Квадрокопт</a>
+							</li>
+						</ul>
 					</li>
-					<li>
-						<a href="#">Доставка</a>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Доставка</a>
 					</li>
-					<li>
-						<a href="#">Гарантия</a>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Гарантия</a>
 					</li>
-					<li>
-						<a href="#">Контакты</a>
+					<li class="nav-item">
+						<a class="nav-link" href="#">Контакты</a>
 					</li>
 				</ul>
 			</nav>
@@ -80,65 +94,77 @@
 			</ul>
 		</div>
 		<div class="wrapper-catalog wrapper">
-			<h2 class="visually-hidden">Каталог товаров</h2> <!-- h2  сделать надо будет скрытно, т.к. имени каталога в макете нет -->
-			<ul class="catalog-list">
-				<li class="catalog-item">
-					<div class="catalog-item-inner">
-						<h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
-						<span>500 руб</span>
-					</div>
-					<a class="catalog-item-img" href="catalog-item.html">
-						<img src="Amateur-selfie-stick.svg" alt="Amateur-selfie-stick" width="150" height="100">
-					</a>
-					<a href="#" class="catalog-item-order"></a>
-					<a href="#" class="catalog-item-compare"></a>
-				</li>
-				<li class="catalog-item">
-					<div class="catalog-item-inner">
-						<h3><a href="catalog-item.html">Проффесиональная селфи-палка</a></h3>
-						<span>1500 руб</span>
-					</div>
-					<a class="catalog-item-img" href="catalog-item.html">
-						<img src="Prof-selfie-stick.svg" alt="Prof-selfie-stick" width="150" height="100">
-					</a>
-					<a href="#" class="catalog-item-order"></a>
-					<a href="#" class="catalog-item-compare"></a>
-				</li>
-				<li class="catalog-item">
-					<div class="catalog-item-inner">
-						<h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
-						<span>2500 руб</span>
-					</div>
-					<a class="catalog-item-img" href="catalog-item.html">
-						<img src="unsinkable-selfie-stick.svg" alt="unsinkable-selfie-stick" width="150" height="100">
-					</a>
-					<a href="#" class="catalog-item-order"></a>
-					<a href="#" class="catalog-item-compare"></a>
-				</li>
-				<li class="catalog-item">
-					<div class="catalog-item-inner">
-						<h3><a href="catalog-item.html">Селфи-палка "Следуй за мной"</a></h3>
-						<span>4900 руб</span>
-					</div>
-					<a class="catalog-item-img" href="catalog-item.html">
-						<img src="follow-me-selfie-stick.svg" alt="follow-me-selfie-stick" width="150" height="100">
-					</a>
-					<a href="#" class="catalog-item-order"></a> 
-					<a href="#" class="catalog-item-compare"></a>
-				</li>
-			</ul>
+			<div class="catalog-box"> <!--внешняя обертка, в которой будет лежать блок с товарами каталога и пагинация  -->
+				<h2 class="visually-hidden">Каталог товаров</h2> <!-- h2  сделать надо будет скрытно, т.к. имени каталога в макете нет -->
+				<ul class="catalog-list">
+					<li class="catalog-item">
+						<div class="catalog-item-inner">
+							<h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
+							<span>500 руб</span>
+						</div>
+						<a class="catalog-item-img" href="catalog-item.html">
+							<img src="Amateur-selfie-stick.svg" alt="Amateur-selfie-stick" width="150" height="100">
+						</a>
+						<div class="catalog-item-hidden">
+							<a href="#" class="catalog-item-order"></a>
+							<a href="#" class="catalog-item-compare"></a>
+						</div>
+					</li>
+					<li class="catalog-item">
+						<div class="catalog-item-inner">
+							<h3><a href="catalog-item.html">Проффесиональная селфи-палка</a></h3>
+							<span>1500 руб</span>
+						</div>
+						<a class="catalog-item-img" href="catalog-item.html">
+							<img src="Prof-selfie-stick.svg" alt="Prof-selfie-stick" width="150" height="100">
+						</a>
+						<div class="catalog-item-hidden">
+							<a href="#" class="catalog-item-order"></a>
+							<a href="#" class="catalog-item-compare"></a>
+						</div>
+					</li>
+					<li class="catalog-item">
+						<div class="catalog-item-inner">
+							<h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
+							<span>2500 руб</span>
+						</div>
+						<a class="catalog-item-img" href="catalog-item.html">
+							<img src="unsinkable-selfie-stick.svg" alt="unsinkable-selfie-stick" width="150" height="100">
+						</a>
+						<div class="catalog-item-hidden">
+							<a href="#" class="catalog-item-order"></a>
+							<a href="#" class="catalog-item-compare"></a>
+						</div>
+					</li>
+					<li class="catalog-item">
+						<div class="catalog-item-inner">
+							<h3><a href="catalog-item.html">Селфи-палка "Следуй за мной"</a></h3>
+							<span>4900 руб</span>
+						</div>
+						<a class="catalog-item-img" href="catalog-item.html">
+							<img src="follow-me-selfie-stick.svg" alt="follow-me-selfie-stick" width="150" height="100">
+						</a>
+						<div class="catalog-item-hidden">
+							<a href="#" class="catalog-item-order"></a> 
+							<a href="#" class="catalog-item-compare"></a>
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div class="wrapper-paginator wrapper">
-			<div class="button-forward">
-				<a href="#">Вперед</a>
-			</div>
-			<ul class="paginator-list">
-				<li class="paginator-item pagination-item-current">1</li>
-				<li class="paginator-item"><a href="#">2</a></li>
-				<li class="paginator-item"><a href="#">3</a></li>
-			</ul>
-			<div class="button-back">
-				<a href="#">Назад</a>
+			<div class="paginator-box"> <!-- для добавления серого фона. Или враппер тоже сойдет? -->
+				<div class="button-forward">
+					<a href="#">Вперед</a>
+				</div>
+				<ul class="paginator-list">
+					<li class="paginator-item pagination-item-current">1</li>
+					<li class="paginator-item"><a href="#">2</a></li>
+					<li class="paginator-item"><a href="#">3</a></li>
+				</ul>
+				<div class="button-back">
+					<a href="#">Назад</a>
+				</div>
 			</div>
 		</div>
 	</main>
@@ -150,7 +176,7 @@
 				<a class="login-btn" href="#"><span class="icon login-icon"></span>Войти</a>
 				<a class="compare-btn" href="#"><span class="icon compare-icon"></span>Сравнить</a>
 				<a class="basket-btn" href="#"><span class="icon basket-icon"></span>>Корзина</a>
-			</div>
+		</div>
 		<nav class="main-nav">
 			<ul class="nav-list">
 				<li>
@@ -166,13 +192,13 @@
 		</nav>
 		<span>Тел.: +7(495)495-95-95</span>
 		<div class="footer-social">
-        	<a class="social-button" href="#">Вконтакте</a>
-        	<a class="social-button" href="#">Фейсбук</a>
-       		<a class="social-button" href="#">Инстаграм</a>
-      	</div>
-      	<div class="htmlacademy">
-      		<a class="html-buttom" href="https://htmlacademy.ru/intensive/htmlcss">htmlacadeny</a>
-      	</div>
+			<a class="social-button" href="#">Вконтакте</a>
+			<a class="social-button" href="#">Фейсбук</a>
+			<a class="social-button" href="#">Инстаграм</a>
+		</div>
+		<div class="htmlacademy">
+			<a class="html-buttom" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
+		</div>
 	</footer>
 </body>
 </html>
