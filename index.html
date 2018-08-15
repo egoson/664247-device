@@ -8,7 +8,10 @@
 <body>
 	<header class="main-header">
 		<div class="wrapper-header wrapper"> <!-- запихал в каждый крупный блок по врапперу, возможно где-то это имя будет не уместно, например, там где надо будет делать серый фон, или там еще добавить надо будет контейнер -->
-			<h1>Device</h1>
+			<div class="logo">
+				<img src="img/logo.png" width="164" height="36" alt="">
+			</div>
+			<h1 class="visually-hidden">Device</h1>
 			<div class="user-menu">
 				<!-- Здесь будет форма -->
 				<a class="user-menu-item login-btn" href="#"><span class="icon login-icon"></span>Войти</a>
@@ -57,7 +60,7 @@
 		<div class="promo-slider-wrapper wrapper">
 			<div class="promo-slides">
 				<div class="promo-slide">
-					<img src="img/main-items-1.svg" width="100" height="250" alt="Селфи палка">
+					<img src="img/slider-1.png" width="384" height="486" alt="Очень большая селфи-палка">
 					<p class="promo-lead">Делай селфи,<br>как Бен Стиллер</p>
 					<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине</p>
 					<p class="promo-desc">Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
@@ -78,7 +81,7 @@
 					</table>
 				</div>
 				<div class="promo-slide">
-					<img src="img/main-items-2.svg" width="100" height="250" alt="Фитнес-браслеты">
+					<img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
 					<p class="promo-lead">Худеем<br>правильно!</p>
 					<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
 					<a href="catalog-item.html" class="promo-link">Подробнее</a>
@@ -90,7 +93,7 @@
 					</table>
 				</div>
 				<div class="promo-slide">
-					<img src="img/main-items-3.svg" width="100" height="250" alt="Дрон"> 
+					<img src="img/slider-3.png" width="526" height="336" alt="Дрон с  лазерной пушкой, замаскированной под камеру"> 
 					<p class="promo-lead">Порхает как бабочка,<br>жалит как пчела</p>
 					<p class="promo-desc">Это обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
 					<a href="catalog-item.html" class="promo-link">Подробнее</a>
@@ -118,7 +121,7 @@
 					<li class="product-item">
 						<a href="catalog-item-vr.html">
 							<div class="product-icon-wrapper">
-								<img src="img/vr.svg" width="50" height="150" alt="Виртуальная реальность">
+								<img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
 							</div>
 							<span>Виртуальная реальность</span>
 						</a>
@@ -126,7 +129,7 @@
 					<li class="product-item">
 						<a href="catalog-item-monopods.html">
 							<div class="product-icon-wrapper">
-								<img src="img/monopods.svg" width="50" height="150" alt="Моноподы для селфи">
+								<img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
 							</div>
 							<span>Моноподы для селфи</span>
 						</a>
@@ -134,7 +137,7 @@
 					<li class="product-item">
 						<a href="catalog-item-actioncamers.html">
 							<div class="product-icon-wrapper">
-								<img src="img/actioncamers.svg" width="50" height="150" alt="Экшн-камеры">
+								<img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
 							</div>
 							<span>Экшн-камеры</span>
 						</a>
@@ -142,7 +145,7 @@
 					<li class="product-item">
 						<a href="catalog-item-fit.html">
 							<div class="product-icon-wrapper">
-								<img src="img/fit.svg" width="50" height="150" alt="Фитнес-браслеты">
+								<img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
 							</div>
 							<span>Фитнес-браслеты</span>
 						</a>
@@ -150,7 +153,7 @@
 					<li class="product-item">
 						<a href="catalog-item-watch.html">
 							<div class="product-icon-wrapper">
-								<img src="img/watch.svg" width="50" height="150" alt="Умные часы">
+								<img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
 							</div>
 							<span>Умные часы</span>
 						</a>
@@ -158,7 +161,7 @@
 					<li class="product-item">
 						<a href="catalog-item-dron.html">
 							<div class="product-icon-wrapper">
-								<img src="img/dron.svg" width="50" height="150" alt="Дрон">
+								<img src="img/popular-6.svg" width="132" height="69" alt="Дрон">
 							</div>
 							<span>Квадрокоптеры</span>
 						</a>
@@ -183,17 +186,17 @@
 				<div class="service-slide">
 					<h3>Доставка</h3>
 					<p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же</p>
-					<img src="img/delivery.svg" alt="Доставка">
+					<img src="img/delivery.svg" width="136" height="164" alt="">
 				</div>
 				<div class="service-slide">
 					<h3>Гарантия</h3>
 					<p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-					<img src="img/guarantee.svg" alt="Гарантия">
+					<img src="img/warranty.svg" width="171" height="" alt="194">
 				</div>
 				<div class="service-slide">
 					<h3>Кредит</h3>
 					<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-					<img src="img/credit.svg" alt="Кредит">
+					<img src="img/credit.svg" width="156" height="186" alt="">
 				</div>
 			</div>
 		</section>
@@ -202,22 +205,22 @@
 				<ul class="partners-list">
 					<li class="partner">
 						<a href="http//www.dji.com">
-							<img src="img/dji.svg" width="50" height="50" alt="dji">
+							<img src="img/logo-1.jpg" width="260" height="100" alt="dji">
 						</a>
 					</li>
 					<li class="partner">
 						<a href="http//www.spgadjets.com">
-							<img src="img/spgadgets.svg" width="50" height="50" alt="spgadjets">
+							<img src="img/logo-2.jpg" width="260" height="100" alt="spgadjets">
 						</a>
 					</li>
 					<li class="partner">
 						<a href="http//www.gopro.com">
-							<img src="img/gopro.svg" width="50" height="50" alt="gopro">
+							<img src="img/logo-3.jpg" width="260" height="100" alt="gopro">
 						</a>
 					</li>
 					<li class="partner">
 						<a href="http//www.vive.com">
-							<img src="img/vive.svg" width="50" height="50" alt="vive">
+							<img src="img/logo-4.jpg" width="260" height="100" alt="vive">
 						</a>
 					</li>
 				</ul>
@@ -246,7 +249,9 @@
 			<div class="wrapper-contacts wrapper">
 				<h3>Контакты</h3>
 				<p>Вы можете забрать товар сами, заехав в наш офис.Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-				<div class="map"></div>
+				<div class="map">
+					<img src="img/map.jpg" width="560" height="222" alt="Адрес офиса:ул.Строителей дом 15">
+				</div>
 				<a href="index.html">Напишите нам</a>
 			</div>
 		</section>
@@ -254,7 +259,10 @@
 	<footer>
 		<div class="wrapper-footer wrapper">
 			<div class="footer-row">
-				<h1>Device</h1>
+				<div class="logo">
+				<img src="img/logo.png" width="164" height="36" alt="">
+			</div>
+			<h2 class="visually-hidden">Device</h2>
 				<div class="user-menu">
 				<!-- Здесь будет форма -->
 					<a class="user-menu-item login-btn" href="#"><span class="icon login-icon"></span>Войти</a>
