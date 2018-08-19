@@ -9,14 +9,16 @@
 	<header class="main-header">
 		<div class="wrapper-header wrapper"> <!-- запихал в каждый крупный блок по врапперу, возможно где-то это имя будет не уместно, например, там где надо будет делать серый фон, или там еще добавить надо будет контейнер -->
 			<div class="logo">
-				<img src="img/logo.png" width="164" height="36" alt="">
+				<a href="index.html">
+					<img src="img/logo.png" width="164" height="36" alt="">
+				</a>
 			</div>
 			<h1 class="visually-hidden">Device</h1>
 			<div class="user-menu">
-				<!-- Здесь будет форма -->
+				<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту" >
 				<div class="user-menu-block">
 					<a class="user-menu-item compare-btn" href="profile.html"><span class="icon profile-icon"></span>Валентин Петухов</a>
-					<a class="user-menu-item log-out-btn" href="#">Выйти</a> 
+					<a class="user-menu-item log-out-btn" href="profile.html">Выйти</a> 
 				</div>
 				<a class="user-menu-item compare-btn" href="#"><span class="icon compare-icon"></span>Сравнить</a>
 				<a class="user-menu-item basket-btn" href="#"><span class="icon basket-icon"></span>Корзина</a>
@@ -24,27 +26,29 @@
 			<nav class="main-nav">
 				<ul class="nav-list">
 					<li class="nav-item">
-						<a class="nav-link" href="#">Каталог товаров</a>
-						<ul class="subnav-list">
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Виртуальная реальность</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Моноподы для селфи</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Экшн-камеры</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Фитнес браслеты</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Умные часы</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Квадрокопт</a>
-							</li>
-						</ul>
+						<details>
+							<summary class="nav-link">Каталог товаров</summary>
+							<ul class="subnav-list">
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Виртуальная реальность</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Моноподы для селфи</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Экшн-камеры</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Фитнес браслеты</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Умные часы</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Квадрокопт</a>
+								</li>
+							</ul>
+						</details>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="#">Доставка</a>
@@ -70,37 +74,83 @@
 		</div>
 		<section class="filters">
 			<div class="wrapper-filter wrapper">
-				<p>Фильтр:</p>
-				<!-- здесь будет форма -->
+				<p class="filter-block">Фильтр:</p>
+				<form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+					<fieldset class="filter-item">
+						<legend>Стоимость</legend>
+						<label for="filter-range"></label>
+						<input class="filter-range visually-hidden" type="range" name="filter-range" id="filter-range" aria-label="Диапазон цен" min="0" max="9000"> <!-- с двумя флажками только через js запилить можно, как понял из форума, так что, это потом, хотя в тз интерактивность не обязательна -->
+					</fieldset>
+					<fieldset class="filter-item">
+						<legend>Цвет</legend>
+						<ul>
+							<li class="filter-option">
+								<label for="color-black">Черный</label>
+								<input class="filter-color visually-hidden" type="checkbox" name="filter-black" id="color-black" checked>
+							</li>
+							<li class="filter-option">
+								<label for="color-white">Белый</label>
+								<input class="filter-color visually-hidden" type="checkbox" name="filter-white" id="color-white">
+							</li>
+							<li class="filter-option">
+								<label for="color-blue">Синий</label>
+								<input class="filter-color visually-hidden" type="checkbox" name="filter-blue" id="color-blue" checked>
+							</li>
+							<li class="filter-option">
+								<label for="color-red">Красный</label>
+								<input class="filter-color visually-hidden" type="checkbox" name="filter-red" id="color-red" checked>
+							</li>
+							<li class="filter-option">
+								<label for="color-pink">Розовый</label>
+								<input class="filter-color visually-hidden" type="checkbox" name="filter-pink" id="color-pink">
+							</li>
+						</ul>
+					</fieldset>
+					<fieldset class="filter-item">
+						<legend>Bluetooth</legend>
+						<ul>
+							<li class="filter-option">
+								<label for="bluetooth">Есть</label>
+								<input class="radio-bluetooth visually-hidden" value="bluetooth-y" type="radio" name="Bluetooth" id="bluetooth" checked>
+							</li>
+							<li class="filter-option">
+								<label for="bluetooth-n">Нет</label>
+								<input class="radio-bluetooth visually-hidden" value="bluetooth-n" type="radio" name="Bluetooth" id="bluetooth-n">
+							</li>
+						</ul>
+					</fieldset>
+					<button class="button" type="submit" aria-label="Показать">Показать</button>
+				</form>
 			</div>
 		</section>
 		<div class="wrapper-sorts wrapper">
-			<p>Сортировка:</p>
+			<p class="filter-block">Сортировка:</p>
 			<ul class="subject-sort">
 				<li class="subject-sort-item">
-					<span>По цене</span>
+					<button>По цене</button>
 				</li>
 				<li class="subject-sort-item">
-					<span>По типу</span>
+					<button>По типу</button>
 				</li>
 				<li class="subject-sort-item">
-					<span>По популярности</span>
+					<button>По популярности</button>
 				</li>
 			</ul>
 			<ul class="direction-sort ">
 				<li class="direction-sort-item">
-					<span>∧</span>
+					<button>∧</button>
 				</li>
 				<li class="direction-sort-item">
-					<span>∨</span>
+					<button>∨</button>
 				</li>
 			</ul>
 		</div>
 		<div class="wrapper-catalog wrapper">
-			<div class="catalog-box"> <!--внешняя обертка, в которой будет лежать блок с товарами каталога и пагинация  -->
-				<h2 class="visually-hidden">Каталог товаров</h2> <!-- h2  сделать надо будет скрытно, т.к. имени каталога в макете нет -->
+			<div class="catalog-box"> 
+				<h2 class="visually-hidden">Каталог товаров</h2> 
 				<ul class="catalog-list">
 					<li class="catalog-item">
+						<div class="label-new visually-hidden">New</div>
 						<div class="catalog-item-inner">
 							<h3><a href="catalog-item.html">Любительская селфи-палка</a></h3>
 							<span>500 руб</span>
@@ -109,11 +159,12 @@
 							<img src="img/item-1.jpg" alt="Любительская селфи-палка с телефоном" width="360" height="380">
 						</a>
 						<div class="catalog-item-hidden">
-							<a href="#" class="catalog-item-order"></a>
-							<a href="#" class="catalog-item-compare"></a>
+							<button class="button">В корзину</button>
+							<button class="catalog-item-compare">Добавить к сравнению</button>
 						</div>
 					</li>
 					<li class="catalog-item">
+						<div class="label-new visually-hidden">New</div>
 						<div class="catalog-item-inner">
 							<h3><a href="catalog-item.html">Проффесиональная селфи-палка</a></h3>
 							<span>1500 руб</span>
@@ -122,11 +173,12 @@
 							<img src="img/item-2.jpg" alt="Проффесиональная селфи-палка с кнопкой" width="360" height="380">
 						</a>
 						<div class="catalog-item-hidden">
-							<a href="#" class="catalog-item-order"></a>
-							<a href="#" class="catalog-item-compare"></a>
+							<button class="button">В корзину</button>
+							<button class="catalog-item-compare">Добавить к сравнению</button>
 						</div>
 					</li>
 					<li class="catalog-item">
+						<div class="label-new visually-hidden">New</div>
 						<div class="catalog-item-inner">
 							<h3><a href="catalog-item.html">Непотопляемая селфи-палка</a></h3>
 							<span>2500 руб</span>
@@ -135,11 +187,12 @@
 							<img src="img/item-3.jpg" alt="Защищенная от воды селфи-палка" width="360" height="380">
 						</a>
 						<div class="catalog-item-hidden">
-							<a href="#" class="catalog-item-order"></a>
-							<a href="#" class="catalog-item-compare"></a>
+							<button class="button">В корзину</button>
+							<button class="catalog-item-compare">Добавить к сравнению</button>
 						</div>
 					</li>
 					<li class="catalog-item">
+						<div class="label-new">New</div>
 						<div class="catalog-item-inner">
 							<h3><a href="catalog-item.html">Селфи-палка "Следуй за мной"</a></h3>
 							<span>4900 руб</span>
@@ -148,25 +201,25 @@
 							<img src="img/item-4.jpg" alt="Селфи-палка 'Следуй за мной' с фальш-рукой" width="360" height="380">
 						</a>
 						<div class="catalog-item-hidden">
-							<a href="#" class="catalog-item-order"></a> 
-							<a href="#" class="catalog-item-compare"></a>
+							<button class="button">В корзину</button>
+							<button class="catalog-item-compare">Добавить к сравнению</button>
 						</div>
 					</li>
 				</ul>
 			</div>
 		</div>
 		<div class="wrapper-paginator wrapper">
-			<div class="paginator-box"> <!-- для добавления серого фона. Или враппер тоже сойдет? -->
+			<div class="paginator-box">
 				<div class="button-forward">
-					<a href="#">Вперед</a>
+					<button>Вперед</button> <!-- мы же не переходим на другую страницу, поэтому баттоны -->
 				</div>
 				<ul class="paginator-list">
 					<li class="paginator-item pagination-item-current">1</li>
-					<li class="paginator-item"><a href="#">2</a></li>
-					<li class="paginator-item"><a href="#">3</a></li>
+					<li class="paginator-item"><button>2</button></li>
+					<li class="paginator-item"><button>3</button></li>
 				</ul>
 				<div class="button-back">
-					<a href="#">Назад</a>
+					<button>Назад</button>
 				</div>
 			</div>
 		</div>
@@ -178,10 +231,12 @@
 			<h2 class="visually-hidden">Device</h2>
 		<p>г.Москва, ул.Строителей,15</p>
 		<div class="user-menu">
-				<!-- Здесь будет форма -->
-				<a class="login-btn" href="#"><span class="icon login-icon"></span>Войти</a>
+				<div class="user-menu-block">
+					<a class="user-menu-item compare-btn" href="profile.html"><span class="icon profile-icon"></span>Валентин Петухов</a>
+					<a class="user-menu-item log-out-btn" href="profile.html">Выйти</a> 
+				</div>
 				<a class="compare-btn" href="#"><span class="icon compare-icon"></span>Сравнить</a>
-				<a class="basket-btn" href="#"><span class="icon basket-icon"></span>>Корзина</a>
+				<a class="basket-btn" href="#"><span class="icon basket-icon"></span>Корзина</a>
 		</div>
 		<nav class="main-nav">
 			<ul class="nav-list">
