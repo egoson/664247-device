@@ -8,7 +8,7 @@
 <body>
 	<section class="popup-write-us">
 		<form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-			<button class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
+			<button type="button" class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
 			<label for="name">Ваше имя:</label>
 			<input type="text" name="name" id="name" aria-label="Введите ваше имя" placeholder="Имя Фамилия">
 			<label for="e-mail">Ваш e-mail:</label>
@@ -21,7 +21,7 @@
 	<section class="popup-map">
 		<h2 class="visually-hidden">Как до нас добраться</h2>
 		<img src="img/map-big.jpg" width="991" height="591" alt="Адрес офиса:ул.Строителей дом 15">
-		<button class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
+		<button type="button" class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
 	</section>
 	<header class="main-header">
 		<div class="wrapper-header wrapper">
@@ -30,46 +30,60 @@
 			</div>
 			<h1 class="visually-hidden">Device</h1>
 			<div class="user-menu">
-				<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту" >
-				<a class="user-menu-item login-btn" href="#"><span class="icon login-icon"></span>Войти</a>
-				<a class="user-menu-item compare-btn" href="#"><span class="icon compare-icon"></span>Сравнить</a>
-				<a class="user-menu-item basket-btn" href="#"><span class="icon basket-icon"></span>Корзина</a>
+				<div class="header-icon-group">
+					<img src="img/search.svg" width="16" height="16">
+					<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
+						<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту">
+					</form>
+				</div>
+				<div class="header-icon-group">
+					<img src="img/user.svg" width="13" height="12">
+					<a class="user-menu-item login-btn" href="#">Войти</a> <!-- Удалил спаны (<span class="icon profile-icon"></span>), так как они предазначались для иконок, думал добавить через css  -->
+				</div>
+				<div class="header-icon-group">
+					<img src="img/compare.svg" width="10" height="10">
+					<a class="user-menu-item compare-btn" href="#">Сравнить</a>
+				</div>
+				<div class="header-icon-group">
+					<img src="img/cart.svg" width="12" height="12">
+					<a class="user-menu-item basket-btn" href="#">Корзина</a>
 			</div>
 			<nav class="main-nav">
 				<ul class="nav-list">
 					<li class="nav-item">
-						<details>
-							<summary class="nav-button">Каталог товаров</summary>
-							<ul class="subnav-list">
-								<li class="subnav-item">
-									<a class="subnav-link" href="#">Виртуальная реальность</a>
-								</li>
-								<li class="subnav-item">
-									<a class="subnav-link" href="#">Моноподы для селфи</a>
-								</li>
-								<li class="subnav-item">
-									<a class="subnav-link" href="#">Экшн-камеры</a>
-								</li>
-								<li class="subnav-item">
-									<a class="subnav-link" href="#">Фитнес браслеты</a>
-								</li>
-								<li class="subnav-item">
-									<a class="subnav-link" href="#">Умные часы</a>
-								</li>
-								<li class="subnav-item">
-									<a class="subnav-link" href="#">Квадрокопт</a>
-								</li>
-							</ul>
-						</details>
+						<div class="header-icon-group">
+							<button type="button" class="nav-button">Каталог товаров</button>
+							<img src="img/plus.svg" width="16" height="16">
+						</div>
+						<ul class="subnav-list">
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Виртуальная реальность</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="catalog.html">Моноподы для селфи</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Экшн-камеры</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Фитнес браслеты</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Умные часы</a>
+							</li>
+							<li class="subnav-item">
+								<a class="subnav-link" href="#">Квадрокопт</a>
+							</li>
+						</ul>
 					</li>
 					<li class="nav-item">
-						<button class="nav-button">Доставка</button>
+						<a class="nav-link">Доставка</a>
 					</li>
 					<li class="nav-item">
-						<button class="nav-button">Гарантия</button>
+						<a class="nav-link">Гарантия</a>
 					</li>
 					<li class="nav-item">
-						<button class="nav-button">Контакты</buttom>
+						<a class="nav-link">Контакты</a>
 					</li>
 				</ul>
 			</nav>
@@ -165,7 +179,7 @@
 			<div class="product-section-wrapper wrapper">
 				<ul class="product-items-section">
 					<li class="product-item">
-						<a href="catalog-item-vr.html">
+						<a href="#">
 							<div class="product-icon-wrapper">
 								<img src="img/popular-1.svg" width="97" height="55" alt="Виртуальная реальность">
 							</div>
@@ -173,7 +187,7 @@
 						</a>
 					</li>
 					<li class="product-item">
-						<a href="catalog-item-monopods.html">
+						<a href="catalog.html">
 							<div class="product-icon-wrapper">
 								<img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
 							</div>
@@ -181,7 +195,7 @@
 						</a>
 					</li>
 					<li class="product-item">
-						<a href="catalog-item-actioncamers.html">
+						<a href="#">
 							<div class="product-icon-wrapper">
 								<img src="img/popular-3.svg" width="71" height="87" alt="Экшн-камеры">
 							</div>
@@ -189,7 +203,7 @@
 						</a>
 					</li>
 					<li class="product-item">
-						<a href="catalog-item-fit.html">
+						<a href="#">
 							<div class="product-icon-wrapper">
 								<img src="img/popular-4.svg" width="107" height="65" alt="Фитнес-браслеты">
 							</div>
@@ -197,7 +211,7 @@
 						</a>
 					</li>
 					<li class="product-item">
-						<a href="catalog-item-watch.html">
+						<a href="#">
 							<div class="product-icon-wrapper">
 								<img src="img/popular-5.svg" width="56" height="98" alt="Умные часы">
 							</div>
@@ -205,7 +219,7 @@
 						</a>
 					</li>
 					<li class="product-item">
-						<a href="catalog-item-dron.html">
+						<a href="#">
 							<div class="product-icon-wrapper">
 								<img src="img/popular-6.svg" width="132" height="69" alt="Дрон">
 							</div>
@@ -220,13 +234,13 @@
 			<div class="wrapper-service wrapper">
 				<ul class="service-list">
 					<li class="service-list-btn delivery-btn">
-						<button class="button">Доставка</button>
+						<button type="button" class="button">Доставка</button>
 					</li>
 					<li class="service-list-btn guarantee-btn">
-						<button class="button">Гарантия</button>
+						<button type="button" class="button">Гарантия</button>
 					</li>
 					<li class="service-list-btn credit-btn">
-						<button class="button">Кредит</button>
+						<button type="button" class="button">Кредит</button>
 					</li>
 				</ul>
 				<div class="service-slide">
@@ -300,7 +314,7 @@
 						<img src="img/map.jpg" width="560" height="222" alt="Адрес офиса:ул.Строителей дом 15">
 					</a>
 				</div>
-				<button class="button">Напишите нам</button>
+				<button type="button" class="button">Напишите нам</button>
 			</div>
 		</section>
 	</main>
@@ -308,26 +322,37 @@
 		<div class="wrapper-footer wrapper">
 			<div class="footer-row">
 				<div class="logo">
-				<img src="img/logo.png" width="164" height="36" alt="">
-			</div>
+					<img src="img/logo.png" width="164" height="36" alt="">
+				</div>
 			<h2 class="visually-hidden">Device</h2>
 				<div class="user-menu">
-					<a class="user-menu-item login-btn" href="#"><span class="icon login-icon"></span>Войти</a>
-					<a class="user-menu-item compare-btn" href="#"><span class="icon compare-icon"></span>Сравнить</a>
-					<a class="user-menu-item basket-btn" href="#"><span class="icon basket-icon"></span>Корзина</a>
+					<div class="header-icon-group">
+						<img src="img/user.svg" width="13" height="12">
+						<a class="user-menu-item login-btn" href="#">Войти</a>
+					</div>
+					<div class="header-icon-group">
+						<img src="img/compare.svg" width="10" height="10">
+						<a class="user-menu-item compare-btn" href="#">Сравнить</a>
+					</div>
+					<div class="header-icon-group">
+						<img src="img/cart.svg" width="12" height="12">
+						<a class="user-menu-item basket-btn" href="#">Корзина</a>
+					</div>
+				</div>
 				</div>
 			</div>
 			<div class="footer-row">
 				<p>г.Москва, ул.Строителей,15</p>
-				<nav class="main-nav">
-					<ul class="nav-list">
+				<nav class="footer-nav">
+					<ul class="footer-nav-list">
 						<li>
-							<button class="footer-button">Доставка</button>
-						<li>
-							<button class="footer-button">Гарантия</button>
+							<a href="#">Доставка</a>
 						</li>
 						<li>
-							<button class="footer-button">Контакты</button>
+							<a href="#">Гарантия</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
 						</li>
 					</ul>
 				</nav>
@@ -335,12 +360,20 @@
 			</div>
 			<div class="footer-row">
 				<div class="footer-social">
-					<a class="social-button" href="https://vk.com">Вконтакте</a>
-					<a class="social-button" href="https://facebook.com">Фейсбук</a>
-					<a class="social-button" href="https://instagram.com">Инстаграм</a>
+					<a class="social-button" href="https://facebook.com">
+						<img src="img/fb.svg" width="32" height="32" alt="link-facebook">
+					</a>
+					<a class="social-button" href="https://instagram.com">
+						<img src="img/instagram.svg" width="32" height="32" alt="link-instagram">
+					</a>
+					<a class="social-button" href="https://twitter.com">
+						<img src="img/twitter.svg" width="32" height="32" alt="link-twitter">
+					</a>
 				</div>
 				<div class="htmlacademy">
-					<a class="html-link" href="https://htmlacademy.ru/intensive/htmlcss">htmlacademy</a>
+					<a class="html-link" href="https://htmlacademy.ru/intensive/htmlcss">
+						<img src="img/logo-html.svg" width="27" height="35" alt="logo-htmlacademy">
+					</a>
 				</div>
 			</div>
 		</div>
