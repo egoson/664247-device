@@ -1,0 +1,32 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 15px;
+	line-height: 30px;
+	font-weight: 300px;
+	color: #000000;
+}
+a {
+	text-decoration: none;
+}
+.nav-list {
+	font-size: 18px;
+	font-weight: bold;
+	list-style: none;
+	line-height: 24px;
+}
+.nav-list .subnav-list {
+	list-style: none;
+}
+.user-menu a,
+.main-nav a{
+	text-decoration: none;
+	color: #000000
+}
+.user-menu a:hover,
+.main-nav a:hover
+
+ {
+	opacity: 0.5
+}
