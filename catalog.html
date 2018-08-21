@@ -2,7 +2,9 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>catalog</title>
 </head>
 <body>
@@ -15,33 +17,22 @@
 			</div>
 			<h1 class="visually-hidden">Device</h1>
 			<div class="user-menu">
-				<div class="header-icon-group">
+				<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
 					<img src="img/search.svg" width="16" height="16">
-					<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
-						<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту">
-					</form>
-				</div>
-				<div class="user-menu-block header-icon-group">
-					<img src="img/user.svg" width="13" height="12">
-					<a class="user-menu-item compare-btn" href="profile.html">Валентин Петухов</a>
+					<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту">
+					<button class="search-btn" type="submit">Найти</button>
+				</form>
+				<div class="user-menu-block">
+					<a class="user-menu-item compare-btn" href="profile.html"><img src="img/user.svg" width="13" height="12">Валентин Петухов</a>
 					<a class="user-menu-item log-out-btn" href="profile.html">Выйти</a> 
 				</div>
-				<div class="header-icon-group">
-					<img src="img/compare.svg" width="10" height="10">
-					<a class="user-menu-item compare-btn" href="#">Сравнить</a>
-				</div>
-				<div class="header-icon-group">
-					<img src="img/cart.svg" width="12" height="12">
-					<a class="user-menu-item basket-btn" href="#">Корзина</a>
-
+				<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10">Сравнить</a>
+				<a class="user-menu-item basket-btn" href="#"><img src="img/cart.svg" width="12" height="12">Корзина</a>
 			</div>
 			<nav class="main-nav">
 				<ul class="nav-list">
 					<li class="nav-item">
-						<div class="header-icon-group">
-							<button type="button" class="nav-button">Каталог товаров</button>
-							<img src="img/plus.svg">
-						</div>
+						<a class="nav-button" href="#">Каталог товаров<img src="img/plus.svg"></a>
 						<ul class="subnav-list">
 							<li class="subnav-item">
 								<a class="subnav-link" href="#">Виртуальная реальность</a>
@@ -81,9 +72,7 @@
 			<h1 class="page-title">Моноподы для селфи</h1>
 			<ul class="breadcrumbs">
 				<li><a href="index.html">Главная</a></li>
-				<li><img src="img/nav-arrow.svg" width="4" height="7"></li>
 				<li><a href="catalog.html">Каталог товаров</a></li>
-				<li><img src="img/nav-arrow.svg" width="4" height="7"></li>
 				<li class="breadcrumbs-current">Моноподы для селфи</li>
 			</ul>
 		</div>
@@ -177,8 +166,8 @@
 							<img src="img/item-1.jpg" alt="Любительская селфи-палка с телефоном" width="360" height="380">
 						</a>
 						<div class="catalog-item-hidden">
-							<button class="button" type="submit">В корзину</button>
-							<button class="catalog-item-compare" type="submit">Добавить к сравнению</button>
+							<a href="#" class="catalog-item-order">В корзину</a>
+							<a href="#" class="catalog-item-compare">Добавить к сравнению</a>
 						</div>
 					</li>
 					<li class="catalog-item">
@@ -190,8 +179,8 @@
 							<img src="img/item-2.jpg" alt="Проффесиональная селфи-палка с кнопкой" width="360" height="380">
 						</a>
 						<div class="catalog-item-hidden">
-							<button class="button" type="button">В корзину</button>
-							<button class="catalog-item-compare" type="button">Добавить к сравнению</button>
+							<a href="#" class="catalog-item-order">В корзину</a>
+							<a href="#" class="catalog-item-compare">Добавить к сравнению</a>
 						</div>
 					</li>
 					<li class="catalog-item">
@@ -203,8 +192,8 @@
 							<img src="img/item-3.jpg" alt="Защищенная от воды селфи-палка" width="360" height="380">
 						</a>
 						<div class="catalog-item-hidden">
-							<button class="button" type="button">В корзину</button>
-							<button class="catalog-item-compare" type="button">Добавить к сравнению</button>
+							<a href="#" class="catalog-item-order">В корзину</a>
+							<a href="#" class="catalog-item-compare">Добавить к сравнению</a>
 						</div>
 					</li>
 					<li class="catalog-item">
@@ -217,8 +206,8 @@
 							<img src="img/item-4.jpg" alt="Селфи-палка 'Следуй за мной' с фальш-рукой" width="360" height="380">
 						</a>
 						<div class="catalog-item-hidden">
-							<button class="button" type="button">В корзину</button>
-							<button class="catalog-item-compare" type="button">Добавить к сравнению</button>
+							<a href="#" class="catalog-item-order">В корзину</a>
+							<a href="#" class="catalog-item-compare">Добавить к сравнению</a>
 						</div>
 					</li>
 				</ul>
@@ -231,8 +220,8 @@
 				</div>
 				<ul class="paginator-list">
 					<li class="paginator-item pagination-item-current">1</li>
-					<li class="paginator-item"><button type="button">2</button></li>
-					<li class="paginator-item"><button type="button">3</button></li>
+					<li class="paginator-item"><a href="#">2</a></li>
+					<li class="paginator-item"><a href="#">3</a></li>
 				</ul>
 				<div class="button-back">
 					<button type="button">Назад</button>
@@ -248,19 +237,12 @@
 				</div>
 			<h2 class="visually-hidden">Device</h2>
 				<div class="user-menu">
-					<div class="user-menu-block header-icon-group">
-						<img src="img/user.svg" width="13" height="12">
-						<a class="user-menu-item compare-btn" href="profile.html">Валентин Петухов</a>
+					<div class="user-menu-block">
+						<a class="user-menu-item compare-btn" href="profile.html"><img src="img/user.svg" width="13" height="12">Валентин Петухов</a>
 						<a class="user-menu-item log-out-btn" href="profile.html">Выйти</a> 
 					</div>
-					<div class="header-icon-group">
-						<img src="img/compare.svg" width="10" height="10">
-						<a class="user-menu-item compare-btn" href="#">Сравнить</a>
-					</div>
-					<div class="header-icon-group">
-						<img src="img/cart.svg" width="12" height="12">
-						<a class="user-menu-item basket-btn" href="#">Корзина</a>
-					</div>
+					<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10">Сравнить</a>
+					<a class="user-menu-item basket-btn" href="#"><img src="img/cart.svg" width="12" height="12">Корзина</a>
 				</div>
 			</div>
 			<div class="footer-row">

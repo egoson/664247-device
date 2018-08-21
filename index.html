@@ -2,59 +2,32 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Device</title>
 </head>
 <body>
-	<section class="popup-write-us">
-		<form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-			<button type="button" class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
-			<label for="name">Ваше имя:</label>
-			<input type="text" name="name" id="name" aria-label="Введите ваше имя" placeholder="Имя Фамилия">
-			<label for="e-mail">Ваш e-mail:</label>
-			<input type="email" name="e-mail" id="e-mail" aria-label="Введите ваш e-mail" placeholder="email@example.com">
-			<label for="mail-text">Текст письма:</label>
-			<input type="text" name="mail-text" id="mail-text" aria-label="Введите текст" placeholder="В свободной форме">
-			<button class="button" type="submit" aria-label="Отправить">Отправить</button>
-		</form>
-	</section>
-	<section class="popup-map">
-		<h2 class="visually-hidden">Как до нас добраться</h2>
-		<img src="img/map-big.jpg" width="991" height="591" alt="Адрес офиса:ул.Строителей дом 15">
-		<button type="button" class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
-	</section>
 	<header class="main-header">
 		<div class="wrapper-header wrapper">
 			<div class="logo">
 				<img src="img/logo.png" width="164" height="36" alt="">
 			</div>
 			<h1 class="visually-hidden">Device</h1>
-			<div class="user-menu">
-				<div class="header-icon-group">
+			<div class="user-menu">	
+				<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
 					<img src="img/search.svg" width="16" height="16">
-					<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
-						<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту">
-					</form>
-				</div>
-				<div class="header-icon-group">
-					<img src="img/user.svg" width="13" height="12">
-					<a class="user-menu-item login-btn" href="#">Войти</a> <!-- Удалил спаны (<span class="icon profile-icon"></span>), так как они предазначались для иконок, думал добавить через css  -->
-				</div>
-				<div class="header-icon-group">
-					<img src="img/compare.svg" width="10" height="10">
-					<a class="user-menu-item compare-btn" href="#">Сравнить</a>
-				</div>
-				<div class="header-icon-group">
-					<img src="img/cart.svg" width="12" height="12">
-					<a class="user-menu-item basket-btn" href="#">Корзина</a>
+					<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту">
+					<button class="search-btn" type="submit">Найти</button>
+				</form>
+				<a class="user-menu-item login-btn" href="#"><img src="img/user.svg" width="13" height="12">Войти</a>
+				<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10">Сравнить</a>
+				<a class="user-menu-item basket-btn" href="#"><img src="img/cart.svg" width="12" height="12">Корзина</a>
 			</div>
 			<nav class="main-nav">
 				<ul class="nav-list">
 					<li class="nav-item">
-						<div class="header-icon-group">
-							<button type="button" class="nav-button">Каталог товаров</button>
-							<img src="img/plus.svg" width="16" height="16">
-						</div>
+						<a class="nav-button" href="#">Каталог товаров<img src="img/plus.svg"></a>
 						<ul class="subnav-list">
 							<li class="subnav-item">
 								<a class="subnav-link" href="#">Виртуальная реальность</a>
@@ -91,22 +64,13 @@
 	</header>
 	<main class="container">
 		<div class="promo-slider-wrapper wrapper">
-			<div class="promo-slides">
+			<section class="promo-slides">
 				<div class="promo-slide">
 					<img src="img/slider-1.png" width="384" height="486" alt="Очень большая селфи-палка">
 					<p class="promo-lead">Делай селфи,<br>как Бен Стиллер</p>
 					<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине</p>
 					<p class="promo-desc">Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
 					<a href="catalog-item.html" class="promo-link">Подробнее</a>
-					<label class="radio-button">
-						<input class="visually-hidden promo-radio-button" type="radio" name="radio-1-slide" checked tabindex="0"> <!-- Я не могу выделить табом незачекованные элементы, для этого я добавил табиндекс, но он не работает -->
-					</label>
-					<label class="radio-button">
-						<input class="visually-hidden promo-radio-button" type="radio" name="radio-1-slide" tabindex="0">
-					</label>
-					<label class="radio-button">
-						<input class="visually-hidden promo-radio-button" type="radio" name="radio-1-slide" tabindex="0">
-					</label>
 					<table>
 						<tr>
 							<th>Длина палки</th>
@@ -127,15 +91,6 @@
 					<p class="promo-lead">Худеем<br>правильно!</p>
 					<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
 					<a href="catalog-item.html" class="promo-link">Подробнее</a>
-					<label class="radio-button">
-						<input type="radio" name="radio-2-slide">
-					</label>
-					<label class="radio-button">
-						<input type="radio" name="radio-2-slide" checked>
-					</label>
-					<label class="radio-button">
-						<input type="radio" name="radio-2-slide">
-					</label>
 					<table>
 						<tr>
 							<th>Без подзарядки</th>
@@ -148,15 +103,6 @@
 					<p class="promo-lead">Порхает как бабочка,<br>жалит как пчела</p>
 					<p class="promo-desc">Это обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
 					<a href="catalog-item.html" class="promo-link">Подробнее</a>
-					<label class="radio-button">
-						<input type="radio" name="radio-3-slide">
-					</label>
-					<label class="radio-button">
-						<input type="radio" name="radio-3-slide">
-					</label>
-					<label class="radio-button">
-						<input type="radio" name="radio-3-slide" checked>
-					</label>
 					<table>
 						<tr>
 							<th>Дальность полета</th>
@@ -168,8 +114,17 @@
 						</tr>
 					</table>
 				</div>
-			</div>
-			<div class="promo-controls"> 
+			</section>
+			<label class="radio-button">
+				<input class="visually-hidden promo-radio-button" type="radio" name="radio-slide" checked tabindex="0"> <!-- вынес радио кнопки за слайды, снизу еще есть кнопки, не удалил их, может они лучше подойдут -->
+			</label>
+			<label class="radio-button">
+				<input class="visually-hidden promo-radio-button" type="radio" name="radio-slide" tabindex="0">
+			</label>
+			<label class="radio-button">
+				<input class="visually-hidden promo-radio-button" type="radio" name="radio-slide" tabindex="0">
+			</label>
+			<div class="promo-controls">  <!-- Кажется это и есть контролы переключения, я про них уже забыл -->
 				<span></span>
 				<span></span>
 				<span></span>
@@ -302,7 +257,7 @@
 						<a href="htpp//www.jde.ru">ЖелДорЭкспедиция</a>
 					</li>
 				</ul>
-				<a href="index.html">Подробнее о нас</a>
+				<a href="#">Подробнее о нас</a>
 			</div>
 		</section>
 		<section class="contacts">
@@ -326,19 +281,9 @@
 				</div>
 			<h2 class="visually-hidden">Device</h2>
 				<div class="user-menu">
-					<div class="header-icon-group">
-						<img src="img/user.svg" width="13" height="12">
-						<a class="user-menu-item login-btn" href="#">Войти</a>
-					</div>
-					<div class="header-icon-group">
-						<img src="img/compare.svg" width="10" height="10">
-						<a class="user-menu-item compare-btn" href="#">Сравнить</a>
-					</div>
-					<div class="header-icon-group">
-						<img src="img/cart.svg" width="12" height="12">
-						<a class="user-menu-item basket-btn" href="#">Корзина</a>
-					</div>
-				</div>
+					<a class="user-menu-item login-btn" href="#"><img src="img/user.svg" width="13" height="12">Войти</a>
+					<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10">Сравнить</a>
+					<a class="user-menu-item basket-btn" href="#"><img src="img/cart.svg" width="12" height="12">Корзина</a>
 				</div>
 			</div>
 			<div class="footer-row">
@@ -378,5 +323,22 @@
 			</div>
 		</div>
 	</footer>
+	<section class="popup-write-us">
+		<form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
+			<button type="button" class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
+			<label for="name">Ваше имя:</label>
+			<input type="text" name="name" id="name" aria-label="Введите ваше имя" placeholder="Имя Фамилия">
+			<label for="e-mail">Ваш e-mail:</label>
+			<input type="email" name="e-mail" id="e-mail" aria-label="Введите ваш e-mail" placeholder="email@example.com">
+			<label for="mail-text">Текст письма:</label>
+			<input type="text" name="mail-text" id="mail-text" aria-label="Введите текст" placeholder="В свободной форме">
+			<button class="button" type="submit" aria-label="Отправить">Отправить</button>
+		</form>
+	</section>
+	<section class="popup-map">
+		<h2 class="visually-hidden">Как до нас добраться</h2>
+		<img src="img/map-big.jpg" width="991" height="591" alt="Адрес офиса:ул.Строителей дом 15">
+		<button type="button" class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
+	</section>
 </body>
 </html>
