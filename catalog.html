@@ -9,7 +9,7 @@
 </head>
 <body>
 	<header class="main-header">
-		<div class="wrapper-header wrapper"> <!-- запихал в каждый крупный блок по врапперу, возможно где-то это имя будет не уместно, например, там где надо будет делать серый фон, или там еще добавить надо будет контейнер -->
+		<div class="wrapper-header wrapper">
 			<div class="logo">
 				<a href="index.html">
 					<img src="img/logo.png" width="164" height="36" alt="">
@@ -18,13 +18,12 @@
 			<h1 class="visually-hidden">Device</h1>
 			<div class="user-menu">
 				<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
-					<img src="img/search.svg" width="16" height="16">
 					<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту">
 					<button class="search-btn" type="submit">Найти</button>
 				</form>
 				<div class="user-menu-block">
 					<a class="user-menu-item compare-btn" href="profile.html"><img src="img/user.svg" width="13" height="12">Валентин Петухов</a>
-					<a class="user-menu-item log-out-btn" href="profile.html">Выйти</a> 
+					<a class="user-menu-item log-out-btn" href="#">Выйти</a> 
 				</div>
 				<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10">Сравнить</a>
 				<a class="user-menu-item basket-btn" href="#"><img src="img/cart.svg" width="12" height="12">Корзина</a>
@@ -216,7 +215,7 @@
 		<div class="wrapper-paginator wrapper">
 			<div class="paginator-box">
 				<div class="button-forward">
-					<button type="button">Вперед</button> <!-- мы же не переходим на другую страницу, поэтому баттоны -->
+					<a href="#">Вперед</a> <!-- мы же не переходим на другую страницу, поэтому баттоны -->
 				</div>
 				<ul class="paginator-list">
 					<li class="paginator-item pagination-item-current">1</li>
@@ -224,7 +223,7 @@
 					<li class="paginator-item"><a href="#">3</a></li>
 				</ul>
 				<div class="button-back">
-					<button type="button">Назад</button>
+					<a href="#">Назад</a>
 				</div>
 			</div>
 		</div>
