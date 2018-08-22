@@ -33,6 +33,16 @@ body {
 	line-height: 30px;
 	font-weight: 300px;
 	color: #000000;
+	width: 1440px;
+	height: 2795px;
+}
+.main-header {
+	width: 1160px;
+	height: 299px;
+	background-color: #f0c52e
+}
+footer { /* так же нельзя, это глобальный селектор? Ему надо класс давать? */
+	background-color: #464646
 }
 .nav-item:not(:first-child) a, /* ну здесь то, точно разметка не развалится */
 .nav-button,
@@ -73,6 +83,21 @@ body {
 .info-block {
 	color: #ffffff
 }
+.footer-social a {
+	opacity: 0.3;
+}
+.footer-social a:hover {
+	opacity: 0.6
+}
+.footer-social a:active {
+	opacity: 0.1
+}
+.htmlacademy a:hover {
+	opacity: 0.6
+} 
+.htmlacademy a:active {
+	opacity: 0.3
+}
 tr th {
 	font-family: 'opensans',sans-serif;
 	font-weight: 300;
@@ -101,6 +126,7 @@ tr td {
 	line-height: 24px;
 	color:#000000;
 	letter-spacing: 2.15px;
+	background-color: #f0c52e;
 }
 .service-list-btn:first-child button {   /* здесь уместно  :first-child ? мне кажется норм, потом можно менять  их и менюшка будет интерактивная, хотя для нее лучше nth-child   */ 
 	color: #f7e184
@@ -325,4 +351,28 @@ a {
 .partners-list li:hover {
 	opacity: 1;
 	filter:none;
+}
+.popup-write-us .modal-close {
+	border:none;
+	background-color: transparent;
+	width: 55px;
+	height: 55px;
+	background-image: url(../img/modal-close.svg);
+	background-repeat: no-repeat;
+	opacity: 0.5
+}
+.popup-write-us .modal-close:hover {
+	opacity: 1
+}
+.popup-write-us .modal-close:active {
+	opacity: 0.3
+}
+.modal-form input {
+	border:none;
+	opacity: 0.5; 
+}
+.service {
+	width: 1440px;
+	height: 288px;
+	background-color: #e5e5e5;
 }
