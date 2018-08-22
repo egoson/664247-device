@@ -1,32 +1,328 @@
+@font-face {
+	font-family: 'gilroy';
+	src:url("../fonts/gilroyextrabold.woff2"),
+		url("../fonts/gilroyextrabold.woff");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'gilroy';
+	src:url("../fonts/gilroylight.woff2"),
+		url("../fonts/gilroylight.woff");
+	font-weight: 300;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'opensans';
+	src:url("../fonts/opensans.woff2"),
+		url("../fonts/opensans.woff");
+	font-weight: 400;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'opensans';
+	src:url("../fonts/opensanslight.woff2"),
+		url("../fonts/opensanslight.woff");
+	font-weight: 300;
+	font-style: normal;
+}
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	line-height: 30px;
 	font-weight: 300px;
 	color: #000000;
 }
+.nav-item:not(:first-child) a, /* ну здесь то, точно разметка не развалится */
+.nav-button,
+.footer-nav-list a {
+	font-family: 'gilory', sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+	letter-spacing: 3.6px;
+	text-transform: uppercase;
+}
+.footer-nav-list a {
+	color: #ffffff;
+}
+.subnav-list a {
+	font-family: 'opensans',sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 36px;
+	color:#000000;
+	letter-spacing: 0.15px
+}
+.user-menu a,
+.promo-desc,
+.service-slide p,
+.wrapper p,
+.footer-row p,
+.info-block {
+	font-family: 'opensans',sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 30px;
+	color:#000000;
+	letter-spacing: 0.15px
+}
+.footer-row p,
+.info-block {
+	color: #ffffff
+}
+tr th {
+	font-family: 'opensans',sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 20px;
+	color:#464646;
+	letter-spacing: 0.13px
+}
+tr td {
+	font-family: 'gilory',sans-serif;
+	font-weight: 300;
+	font-size: 36px;
+	line-height: 48px;
+	color:#000000;
+	letter-spacing: 0.36px
+}
+.promo-slide .promo-link,
+.service-list button,
+.wrapper button,
+.wrapper-about-us a,
+.popup-write-us-button,
+.catalog-item-hidden .catalog-item-order {
+	font-family: 'gilory',sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 24px;
+	color:#000000;
+	letter-spacing: 2.15px;
+}
+.service-list-btn:first-child button {   /* здесь уместно  :first-child ? мне кажется норм, потом можно менять  их и менюшка будет интерактивная, хотя для нее лучше nth-child   */ 
+	color: #f7e184
+}
+.product-item span,
+.popup-write-us label{
+	font-family: 'gilory',sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 24px;
+	color:#000000;
+	letter-spacing: 0.18px
+}
+.service-slide h3,
+.wrapper h3 {                               /*      то, что использовал класс враппер мне не нравится, хотя может это норм? по другому там тоже особо не сделаешь, получается больше селекторов , и как здесь писать не в одну линию??     */   
+	font-family: 'gilroy', sans-serif;
+	font-size: 47px;
+	line-height: 48px;
+	font-weight: 800;
+	color: #000000;
+	letter-spacing: 0.21px;
+}
+.transport-brands-slide a {
+	font-family: 'gilory',sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 24px;
+	color:#000000;
+	letter-spacing: 2.15px;
+}
+.transport-brands li,
+.footer-nav-list li {
+	list-style: none;
+}
+.footer-row .user-menu-item {
+	font-family: 'opensans',sans-serif;
+	font-weight: 300;
+	font-size: 15px;
+	line-height: 36px;
+	color:rgba(255, 255, 255, 0.7);
+	letter-spacing: 0.15px
+}
 a {
 	text-decoration: none;
 }
+.promo-lead {
+	font-family: 'gilroy', sans-serif;
+	font-size: 47px;
+	line-height: 56px;
+	font-weight: 800;
+}
 .nav-list {
+	font-family: 'gilroy', sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	list-style: none;
 	line-height: 24px;
 }
-.nav-list .subnav-list {
+.catalog-item-hidden .catalog-item-compare {
+	font-family: 'opensans',sans-serif;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 20px;
+	color:rgba(0, 0, 0, 0.5);
+	letter-spacing: 0.13px
+}
+.catalog-item-hidden .catalog-item-compare:hover {
+	color:rgba(0, 0, 0, 1);
+}
+.catalog-item-hidden .catalog-item-compare:active {
+	color:rgba(0, 0, 0, 0.2);
+}
+.breadcrumbs li {
+	font-family: 'opensans',sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+	color:rgba(0, 0, 0, 0.3);
+	letter-spacing: 0.14px
+}
+.breadcrumbs a {   /* наверно это плохая практика, в списке в двух li есть ссылки, а в одном нет, поэтому продублировал код  */ 
+	font-family: 'opensans',sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+	color:rgba(0, 0, 0, 0.3);
+	letter-spacing: 0.14px
+}
+.breadcrumbs a:hover,
+.breadcrumbs li:hover,
+.subject-sort button:hover {
+	color:rgba(0, 0, 0, 0.6);
+}
+.breadcrumbs a:active,
+.breadcrumbs li:active {
+	color:rgba(0, 0, 0, 0.1);
+}
+.wrapper .filter-block,
+.button-forward a,
+.button-back a,
+.paginator-list .pagination-item-current,
+.paginator-item a {
+	font-family: 'gilory',sans-serif;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 24px;
+	color:#000000;
+	letter-spacing: 0.91px
+}
+.paginator-item a {
+	color: rgba(0, 0, 0, 0.3);
+} 
+.subject-sort button {
+	font-family: 'opensans',sans-serif;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	color:rgba(0, 0, 0, 0.3);
+	border:none;
+	background-color: transparent;
+}
+.direction-sort button {
+	background-color: transparent;
+	border:none;
+}
+.subject-sort button:active {
+	color:rgba(0, 0, 0, 1);
+}
+.filter-item legend,
+.catalog-item-inner a {
+	font-family: 'gilory',sans-serif;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 24px;
+	color:#000000;
+	letter-spacing: 0.18px
+}
+.catalog-item-inner span {
+	font-family: 'gilory',sans-serif;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 24px;
+	color:#464646;
+	letter-spacing: 0.16px;
+}
+.filter-option label {
+	font-family: 'opensans',sans-serif;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 40px;
+	color:#000000;
+	letter-spacing: 0.14px
+}
+.direction-sort-item button {
+	opacity: 0.2
+}
+.direction-sort-item button:hover {
+	opacity: 0.4
+}
+.direction-sort-item button:active {
+	opacity: 1
+}
+.nav-list .subnav-list,
+.partners-list li,
+.breadcrumbs li,
+.subject-sort li,
+.direction-sort li,
+.catalog-list li,
+.paginator-list li {
 	list-style: none;
 }
-.user-menu a,
-.main-nav a{
-	text-decoration: none;
-	color: #000000
+
+.user-menu-search input,
+.nav-button img {
+	opacity: 0.3;
+	border:none;
+}
+
+.search-btn:hover {
+	color: rgba(255, 255, 255, 1);
+	background-color: #000000;
+}
+.search-btn:focus {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #000000;
+}
+.button {
+	font-style: inherit;
+	border:none;
+	background-color: transparent;
+}
+.logo a:hover,
+.user-menu-search input:hover,
+.user-menu img:hover { /* так, у меня при наведение на значок, выделяется и ссылка, а вот при наведении на ссылку, значок не выделяется */ 
+	opacity: 0.6
+}
+.logo a:active,
+.user-menu img:active,
+.product-items-section li:active { /* потом переопределим фон (он тоже под опасити же попадает?) или уже неправильно?*/
+	opacity: 0.3
+}
+.user-menu-search input:focus {
+	opacity: 1
 }
 .user-menu a:hover,
-.main-nav a:hover
-
- {
-	opacity: 0.5
+.subnav-list a:hover,
+.nav-button:hover,
+.nav-item .nav-link:hover {    /* почему только .nav-link:hover не срабатывает? я добавил .nav-item и начало работать, а без этого класса нет */
+	color: rgba(0, 0, 0, 0.6);
+}
+.user-menu a:active,
+.subnav-list a:active,
+.nav-button:active,
+.nav-item .nav-link:active,
+.promo-slide .promo-link:active {
+	color: rgba(0, 0, 0, 0.3);
+}
+.partners-list li {
+	opacity: 0.2;
+	filter: grayscale(100%);
+}
+.partners-list li:hover {
+	opacity: 1;
+	filter:none;
 }
