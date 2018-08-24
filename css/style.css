@@ -33,28 +33,27 @@ body {
 	line-height: 30px;
 	font-weight: 300px;
 	color: #000000;
-	width: 1440px;
-	height: 2795px;
 }
 /* общие элементы */
-/* здесь отключаю дефолтные(что это такое!?бестолковые стили?) стили у лишек */
 .nav-list,
 .subnav-list,
 .product-items-section,
 .service-list,
 .partners-list,
 .transport-brands,
-.footer-nav-list {
+.footer-nav-list,
+.breadcrumbs,
+.filter-list,
+.subject-sort,
+.direction-sort,
+.catalog-list,
+.paginator-list {
 	list-style: none;
 	padding: 0;
-	margin: 0
+	margin: 0;
 }
 /* кнопка с желтой полоской по центру */
-.promo-link,
-.service-list button,
-.wrapper-about-us a,
-.wrapper-contacts button,
-.popup-write-us-button {
+.btn {
 	font-family: gilroy;
 	font-weight: 800;
 	padding: 0;
@@ -65,12 +64,23 @@ body {
 	color: #000000;
 	letter-spacing: 2.15px;
 	background-color: transparent;
-	border:none;
+	border: none;
 	border-radius: 0;
 }
 																/* начинаю разметку	хедераааааа */
+.logo img:hover {
+	opacity: 0.6
+}
+.logo img:active {
+	opacity: 0.3
+}
 
-/* форма инпут Поиск по сайту , войти ,сравить, корзина,кнопка найти												юзер меню*/
+																													/*юзер меню*/
+.main-header {
+	max-width: 1160px;
+	background-color: rgba(240, 197, 46, 0.5);
+	margin: 40px 140px
+}
 .user-menu input[type="search"],
 .user-menu a,
 form .search-btn {
@@ -84,8 +94,33 @@ form .search-btn {
 	color: #000000;
 	letter-spacing: 0.15px;
 }
-/* каталог, доставка, гарантия , контакты	и выпадающая навигация												главное меню */
-.nav-button,
+.user-menu input[type="search"] {
+	opacity: 0.3;
+}
+.user-menu input[type="search"]:hover {
+	opacity: 0.6;
+}
+.user-menu input[type="search"]:focus {
+	opacity: 1
+}
+.user-menu-item:hover {
+	opacity: 0.6
+}
+.user-menu-item:active {
+	opacity: 0.3
+}
+form .search-btn {
+	padding: 21px 19px
+}
+form .search-btn:hover {
+	color: rgba(255, 255, 255, 1);
+	background-color: #000000;
+}
+form .search-btn:active {
+	color: rgba(255, 255, 255, 0.3);
+	background-color: #000000
+}
+																												/*главное меню */
 .nav-item-link a {
 	font-family: gilroy;
 	font-weight: 800;
@@ -103,6 +138,12 @@ form .search-btn {
 	line-height: 36px;
 	color: #000000;
 	letter-spacing: 0.15px;
+}
+.nav-item-link a:hover {
+	color: rgba(0, 0, 0, 0.6);
+}
+.nav-item-link a:active {
+	color: rgba(0, 0, 0, 0.3);
 }
 													/*владения хедера на этом моменте заканчиваются*/
 																		/*начинается мейн контйнер*/
@@ -123,7 +164,7 @@ form .search-btn {
 	color: #000000;
 	letter-spacing: 0.15px;
 }
-tr td {
+.info-table th {
 	font-family: opensans;
 	font-weight: 300;
 	font-size: 13px;
@@ -131,7 +172,7 @@ tr td {
 	color: #464646;
 	letter-spacing: 0.13px;
 }
-tr th {
+.info-table td {
 	font-family: gilroy;
 	font-weight: 300;
 	font-size: 36px;
@@ -148,6 +189,16 @@ tr th {
 	line-height: 24px;
 	color: #000000;
 	letter-spacing: 0.18px;
+}
+.product-icon-wrapper {
+	background-color: rgba(240, 197, 46, 0.5);
+}
+.product-icon-wrapper:hover { 
+	background-color: rgba(240, 197, 46, 1);
+}
+.product-item:active img,
+.product-item:active span {
+	opacity: 0.3
 }
 																													/*сервис*/
 .service-slide h3 {
@@ -168,8 +219,8 @@ tr th {
 }
 																										/* партнеры пока пусто */
 																										/*о нас, контакты*/
-.wrapper-about-us h3,
-.wrapper-contacts h3 {
+.about-us h3,
+.contacts h3 {
 	font-family: gilroy;
 	font-weight: 800;
 	font-size: 47px;
@@ -177,8 +228,8 @@ tr th {
 	color: #000000;
 	letter-spacing: 0.21px;
 }
-.wrapper-about-us p,
-.wrapper-contacts p {
+.about-us p,
+.contacts p {
 	font-family: opensans;
 	font-weight: 300;
 	font-size: 15px;
@@ -202,10 +253,10 @@ tr th {
 	font-size: 15px;
 	line-height: 36px;
 	text-decoration: none;
-	letter-spacing: 0.15;
+	letter-spacing: 0.15px;
 	color: #ffffff;
 }
-.footer-row p {
+.address {
 	font-family: opensans;
 	font-weight: 300;
 	font-size: 15px;
@@ -221,7 +272,7 @@ tr th {
 	letter-spacing: 3.6px;
 	text-decoration: none;
 }
-.info-block {
+.phone-link {
 	font-family: opensans;
 	font-weight: 300;
 	font-size: 15px;
@@ -239,10 +290,252 @@ tr th {
 	color: #000000;
 }
 .modal-form input[type="text"],
-.modal-form input[type="email"] {
+.modal-form input[type="email"],
+.modal-form input[type="textarea"] {
 	font-family: opensans;
 	font-weight: 300;
 	font-size: 14px;
 	line-height: 18px;
 	color: #464646;
+	box-sizing: border-box;
+	border: none;
+	background-color: #f2f2f2
+}
+.modal-form input[type="text"],
+.modal-form input[type="email"] {
+	width: 360px;
+	min-height: 50px;
+	padding: 18px 20px;
+}
+.modal-form input[type="textarea"] {
+	min-height: 156px;
+	width: 760px;
+	padding: 18px 20px
+}
+.modal-form input:hover {
+	background-color: #eaeaea
+}
+.modal-form input:focus {
+	background-color: #ffffff;
+	outline: 3px solid #f0c52e
+}
+.modal-form input:invalid {
+	background-color: #f6dada
+}
+::-webkit-input-placeholder { 
+	color: rgba(70, 70, 70, 0.4);
+	font-family: opensans;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 18px;
+
+}
+::-moz-placeholder	{ 
+	color: rgba(70, 70, 70, 0.4);
+	font-family: opensans;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 18px; 
+} /* Firefox 19+ */
+:-moz-placeholder	{ 
+	color: rgba(70, 70, 70, 0.4);
+	font-family: opensans;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 18px; 
+} /* Firefox 18- */
+:-ms-input-placeholder	{ 
+	color: rgba(70, 70, 70, 0.4);
+	font-family: opensans;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 18px;
+}
+
+.modal-close {
+	width: 55px;
+	height: 56px;
+	background: url(../img/modal-close.svg) no-repeat;
+	border: none;
+	box-shadow: none;
+}
+/*Стилизация каталога*/
+																/*каталог мейн контейнер*/
+.container-catalog .page-title {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 47px;
+	line-height: 48px;
+	color: #000000;
+	letter-spacing: 0.17;
+}
+.breadcrumbs,
+.breadcrumbs a {
+	font-family: opensans;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.3);
+	text-decoration: none;
+}
+.breadcrumbs a:hover {
+	color: rgba(0, 0, 0, 0.6)
+}
+.breadcrumbs a:active {
+	color: rgba(0, 0, 0, 0.1)
+}
+																									/*фильтры*/
+.filter-item {
+	border: none;
+	margin: 0;
+	padding: 0;
+}
+.subject-sort-item a {
+	opacity: 0.3
+}
+.subject-sort-item:hover a {
+	opacity: 0.6
+}
+.subject-sort-item:active a {
+	opacity: 1
+}
+.filter-block {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000000;
+	letter-spacing: 0.91;
+}
+.filter-item legend {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+	letter-spacing: 0.18;
+}
+.filter-option label {
+	font-family: opensans;
+	font-weight: 300;
+	font-size: 14px;
+	line-height: 40px;
+	color: #000000;
+	letter-spacing: 0.14px;
+}
+.subject-sort-item a {
+	font-family: opensans;
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 18px;
+	color: #000000;
+	text-decoration: none;
+}
+																/*блок с карточками товаров включая пагинатор*/
+.label-new {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 14px;
+	line-height: 24px;
+	color: #000000;
+	letter-spacing: 0.25;
+	opacity: 0.2;
+	text-transform: uppercase;
+}
+.catalog-item-inner a {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 24px;
+	color: #000000;
+	letter-spacing: 0.18;
+	text-decoration: none;
+}
+.catalog-item-inner span {
+	font-family: opensans;
+	font-weight: 300;
+	font-size: 16px;
+	line-height: 24px;
+	color: #464646;
+	letter-spacing: 0.16px;
+}
+/* стиль для карточки при наведении */
+.catalog-item-compare {
+	font-family: opensans;
+	font-weight: 300;
+	font-size: 13px;
+	line-height: 36px;
+	color: #464646;
+	letter-spacing: 0.13px;
+	text-decoration: none;
+}
+/*пагинатор*/
+
+.paginator-box {
+	display: flex;
+	max-width: 760px;
+	justify-content: space-between;
+	background-color: #ebebeb;
+	align-items: center;
+	box-sizing: border-box;
+	padding-top: 30px;
+	padding-bottom: 27px;
+	padding-left: 30px;
+	max-height: 70px;
+	padding-right: 30px
+}
+.paginator-list {
+	display: flex;
+}
+.paginator-item {
+	padding-right: 31px
+}
+.button-forward a {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000000;
+	letter-spacing: 0.91;
+	text-decoration: none;
+}
+.button-back a {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 24px;
+	color: #000000;
+	letter-spacing: 0.91;
+	text-decoration: none;
+}
+.paginator-list,
+.paginator-list a {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.3);
+	letter-spacing: 0.91;
+	text-decoration: none;
+}
+.paginator-item a:hover {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 0.6);
+	letter-spacing: 0.91;
+	text-decoration: none;
+}
+.paginator-item a:active {
+	font-family: gilroy;
+	font-weight: 800;
+	font-size: 16px;
+	line-height: 24px;
+	color: rgba(0, 0, 0, 1);
+	letter-spacing: 0.91;
+	text-decoration: none;
+}
+.pagination-item-current {
+	color: rgba(0, 0, 0, 1);
 }
