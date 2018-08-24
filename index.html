@@ -2,7 +2,6 @@
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&amp;subset=cyrillic" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Device</title>
@@ -18,7 +17,7 @@
 				<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
 					<img src="img/search.svg" width="16" height="16">
 					<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту">
-					<button class="search-btn" type="submit">Найти</button>
+					<button class="search-btn button" type="submit">Найти</button>
 				</form>
 				<a class="user-menu-item login-btn" href="#"><img src="img/user.svg" width="13" height="12">Войти</a>
 				<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10">Сравнить</a>
@@ -26,7 +25,7 @@
 			</div>
 			<nav class="main-nav">
 				<ul class="nav-list">
-					<li class="nav-item">
+					<li class="nav-item-link">
 						<a class="nav-button" href="#">Каталог товаров<img src="img/plus.svg"></a>
 						<ul class="subnav-list">
 							<li class="subnav-item">
@@ -45,17 +44,17 @@
 								<a class="subnav-link" href="#">Умные часы</a>
 							</li>
 							<li class="subnav-item">
-								<a class="subnav-link" href="#">Квадрокопт</a>
+								<a class="subnav-link" href="#">Квадрокоптеры</a>
 							</li>
 						</ul>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item-link">
 						<a class="nav-link" href="#">Доставка</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item-link">
 						<a class="nav-link" href="#">Гарантия</a>
 					</li>
-					<li class="nav-item">
+					<li class="nav-item-link">
 						<a class="nav-link" href="#">Контакты</a>
 					</li>
 				</ul>
@@ -70,8 +69,8 @@
 					<p class="promo-lead">Делай селфи,<br>как Бен Стиллер</p>
 					<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине</p>
 					<p class="promo-desc">Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-					<a href="catalog-item.html" class="promo-link">Подробнее</a>
-					<table>
+					<a href="catalog-item.html" class="promo-link btn">Подробнее</a>
+					<table class="info-table">
 						<tr>
 							<th>Длина палки</th>
 							<td>8,5 м</td>
@@ -90,8 +89,8 @@
 					<img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
 					<p class="promo-lead">Худеем<br>правильно!</p>
 					<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
-					<a href="catalog-item.html" class="promo-link">Подробнее</a>
-					<table>
+					<a href="catalog-item.html" class="promo-link btn">Подробнее</a>
+					<table class="info-table">
 						<tr>
 							<th>Без подзарядки</th>
 							<td>48 часов</td>
@@ -102,8 +101,8 @@
 					<img src="img/slider-3.png" width="526" height="336" alt="Дрон с  лазерной пушкой, замаскированной под камеру"> 
 					<p class="promo-lead">Порхает как бабочка,<br>жалит как пчела</p>
 					<p class="promo-desc">Это обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
-					<a href="catalog-item.html" class="promo-link">Подробнее</a>
-					<table>
+					<a href="catalog-item.html" class="promo-link btn">Подробнее</a>
+					<table class="info-table">
 						<tr>
 							<th>Дальность полета</th>
 							<td>800 м</td>
@@ -186,13 +185,13 @@
 			<div class="wrapper-service wrapper">
 				<ul class="service-list">
 					<li class="service-list-btn delivery-btn">
-						<button type="button" class="button">Доставка</button>
+						<button type="button" class="button btn">Доставка</button>
 					</li>
 					<li class="service-list-btn guarantee-btn">
-						<button type="button" class="button">Гарантия</button>
+						<button type="button" class="button btn">Гарантия</button>
 					</li>
 					<li class="service-list-btn credit-btn">
-						<button type="button" class="button">Кредит</button>
+						<button type="button" class="button btn">Кредит</button>
 					</li>
 				</ul>
 				<div class="service-slide">
@@ -217,22 +216,22 @@
 				<ul class="partners-list">
 					<li class="partner">
 						<a href="http//www.dji.com">
-							<img src="img/logo-1.jpg" width="260" height="100" alt="dji">
+							<img class="hidden-colorless" src="img/logo-1-colorless.jpg" width="260" height="100" alt="dji">
 						</a>
 					</li>
 					<li class="partner">
 						<a href="http//www.spgadjets.com">
-							<img src="img/logo-2.jpg" width="260" height="100" alt="spgadjets">
+							<img src="img/logo-2-colorless.jpg" width="260" height="100" alt="spgadjets">
 						</a>
 					</li>
 					<li class="partner">
 						<a href="http//www.gopro.com">
-							<img src="img/logo-3.jpg" width="260" height="100" alt="gopro">
+							<img src="img/logo-3-colorless.jpg" width="260" height="100" alt="gopro">
 						</a>
 					</li>
 					<li class="partner">
 						<a href="http//www.vive.com">
-							<img src="img/logo-4.jpg" width="260" height="100" alt="vive">
+							<img src="img/logo-4-colorless.jpg" width="260" height="100" alt="vive">
 						</a>
 					</li>
 				</ul>
@@ -243,18 +242,18 @@
 				<h3>О нас</h3>
 				<p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 				<p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортным компаниями:</p>
-				<ul class="transport-partners">
-					<li class="transport-partners-slide">
+				<ul class="transport-brands"> <!-- Это лектор сказал , что они не партнеры нам, а просто бренды -->
+					<li class="transport-brands-slide">
 						<a href="htpp//www.dellin.ru">Деловые линии</a>
 					</li>
-					<li class="transport-partners-slide">
+					<li class="transport-brands-slide">
 						<a href="htpp//www.autotrading.ru">Автотрейдинг</a>
 					</li>
-					<li class="transport-partners-slide">
+					<li class="transport-brands-slide">
 						<a href="htpp//www.jde.ru">ЖелДорЭкспедиция</a>
 					</li>
 				</ul>
-				<a href="#">Подробнее о нас</a>
+				<a class="btn" href="#">Подробнее о нас</a>
 			</div>
 		</section>
 		<section class="contacts">
@@ -266,7 +265,7 @@
 						<img src="img/map.jpg" width="560" height="222" alt="Адрес офиса:ул.Строителей дом 15">
 					</a>
 				</div>
-				<button type="button" class="button">Напишите нам</button>
+				<a href="#" class="button btn">Напишите нам</a>
 			</div>
 		</section>
 	</main>
@@ -274,17 +273,17 @@
 		<div class="wrapper-footer wrapper">
 			<div class="footer-row">
 				<div class="logo">
-					<img src="img/logo.png" width="164" height="36" alt="">
+					<img src="img/logo-color.png" width="164" height="36" alt="">
 				</div>
 			<h2 class="visually-hidden">Device</h2>
-				<div class="user-menu">
+				<div class="user-menu-footer">
 					<a class="user-menu-item login-btn" href="#"><img src="img/user.svg" width="13" height="12">Войти</a>
 					<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10">Сравнить</a>
 					<a class="user-menu-item basket-btn" href="#"><img src="img/cart.svg" width="12" height="12">Корзина</a>
 				</div>
 			</div>
 			<div class="footer-row">
-				<p>г.Москва, ул.Строителей,15</p>
+				<p class="address">г.Москва, ул.Строителей,15</p>
 				<nav class="footer-nav">
 					<ul class="footer-nav-list">
 						<li>
@@ -298,7 +297,7 @@
 						</li>
 					</ul>
 				</nav>
-				<a href="tel:+7(495)495-95-95">Тел.: +7(495)495-95-95</a>
+				<a class="phone-link" href="tel:+7(495)495-95-95">Тел.: +7(495)495-95-95</a>
 			</div>
 			<div class="footer-row">
 				<div class="footer-social">
@@ -322,20 +321,20 @@
 	</footer>
 	<section class="popup-write-us">
 		<form class="modal-form" action="https://echo.htmlacademy.ru" method="post">
-			<button type="button" class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
+			<button type="button" class="modal-close" aria-label="Закрыть модальное окно"></button>
 			<label for="name">Ваше имя:</label>
 			<input type="text" name="name" id="name" aria-label="Введите ваше имя" placeholder="Имя Фамилия">
 			<label for="e-mail">Ваш e-mail:</label>
 			<input type="email" name="e-mail" id="e-mail" aria-label="Введите ваш e-mail" placeholder="email@example.com">
 			<label for="mail-text">Текст письма:</label>
-			<input type="text" name="mail-text" id="mail-text" aria-label="Введите текст" placeholder="В свободной форме">
-			<button class="button" type="submit" aria-label="Отправить">Отправить</button>
+			<input type="textarea" name="mail-text" id="mail-text" aria-label="Введите текст" placeholder="В свободной форме">
+			<button class="popup-write-us-button button btn" type="submit" aria-label="Отправить">Отправить</button>
 		</form>
 	</section>
 	<section class="popup-map">
 		<h2 class="visually-hidden">Как до нас добраться</h2>
+		<button type="button" class="modal-close" aria-label="Закрыть модальное окно"></button>
 		<img src="img/map-big.jpg" width="991" height="591" alt="Адрес офиса:ул.Строителей дом 15">
-		<button type="button" class="modal-close" aria-label="Закрыть модальное окно">Закрыть модальное окно</button>
 	</section>
 </body>
 </html>
