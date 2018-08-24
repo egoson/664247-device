@@ -34,6 +34,13 @@ body {
 	font-weight: 300px;
 	color: #000000;
 }
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 /* общие элементы */
 .nav-list,
 .subnav-list,
@@ -74,12 +81,21 @@ body {
 .logo img:active {
 	opacity: 0.3
 }
+.logo {
+	margin:0;
+	padding: 0;
+}
 
 																													/*юзер меню*/
 .main-header {
-	max-width: 1160px;
+	width: 1160px;
 	background-color: rgba(240, 197, 46, 0.5);
-	margin: 40px 140px
+	margin: 40px auto;
+}
+.logo img {
+	position: relative;
+	bottom:18px;
+	left: 60px
 }
 .user-menu input[type="search"],
 .user-menu a,
@@ -193,7 +209,7 @@ form .search-btn:active {
 .product-icon-wrapper {
 	background-color: rgba(240, 197, 46, 0.5);
 }
-.product-icon-wrapper:hover { 
+.product-item:hover .product-icon-wrapper { 
 	background-color: rgba(240, 197, 46, 1);
 }
 .product-item:active img,
@@ -324,32 +340,15 @@ form .search-btn:active {
 }
 ::-webkit-input-placeholder { 
 	color: rgba(70, 70, 70, 0.4);
-	font-family: opensans;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 18px;
-
 }
 ::-moz-placeholder	{ 
-	color: rgba(70, 70, 70, 0.4);
-	font-family: opensans;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 18px; 
+	color: rgba(70, 70, 70, 0.4); 
 } /* Firefox 19+ */
 :-moz-placeholder	{ 
 	color: rgba(70, 70, 70, 0.4);
-	font-family: opensans;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 18px; 
 } /* Firefox 18- */
 :-ms-input-placeholder	{ 
 	color: rgba(70, 70, 70, 0.4);
-	font-family: opensans;
-	font-weight: 400;
-	font-size: 18px;
-	line-height: 18px;
 }
 
 .modal-close {
@@ -361,7 +360,7 @@ form .search-btn:active {
 }
 /*Стилизация каталога*/
 																/*каталог мейн контейнер*/
-.container-catalog .page-title {
+.page-title {
 	font-family: gilroy;
 	font-weight: 800;
 	font-size: 47px;
