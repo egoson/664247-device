@@ -31,7 +31,7 @@ body {
 	padding: 0;
 	font-size: 15px;
 	line-height: 30px;
-	font-weight: 300px;
+	font-weight: 300;
 	color: #000000;
 }
 .visually-hidden {
@@ -89,13 +89,62 @@ body {
 																													/*юзер меню*/
 .main-header {
 	width: 1160px;
-	background-color: rgba(240, 197, 46, 0.5);
-	margin: 40px auto;
+	margin: 0 auto;
+	margin-top: 40px;
+	
 }
-.logo img {
-	position: relative;
-	bottom:18px;
-	left: 60px
+.container {
+	width: 1160px;
+	margin: 0 auto;
+}
+.wrapper-header {
+	min-height: 299px;
+	background-color: #f8e296;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+.logo {
+	margin-bottom: -28px;
+	margin-left: 60px;
+	
+}
+.user-menu {
+	display: flex;
+	margin-left: 60px;
+	margin-right: 60px;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 34px
+}
+.nav-list {
+
+	display: flex;
+	margin-left: 60px;
+	margin-right: 57px;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-item-link {
+	align-self: flex-start;
+}
+.nav-item-link:last-child {
+	margin-left: 114px
+}
+.nav-item-link:nth-child(3)
+ {
+	margin-left: 38px
+}
+
+.nav-item-link:nth-child(2),
+.login-btn {
+	margin-left: auto;
+}
+.basket-btn {
+	margin-left: 40px
+}
+.compare-btn {
+	margin-left: 262px
 }
 .user-menu input[type="search"],
 .user-menu a,
@@ -136,7 +185,61 @@ form .search-btn:active {
 	color: rgba(255, 255, 255, 0.3);
 	background-color: #000000
 }
+/* блок сетки промо */
+.container {
+	margin-top: -117px
+}
+.promo-slide {
+	width: 100%;
+	height: 490px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	padding-left: 90px;
+	padding-right: 60px;
+	justify-content: flex-end;
+}
+.wrapper-promo {
+	margin-left: -60px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+.wrapper-promo p {
+	margin:0;
+	padding: 0
+}
+.promo-lead {
+
+}
+.promo-desc {
+	
+}
+
+
 																												/*главное меню */
+.number {
+	font-family: gilroy;
+	font-weight: 800;
+	position: absolute;
+	right: 540px;
+	top: 330px;
+	text-decoration: none;
+	font-size: 179px;
+	line-height: 179.2px;
+	color: #ffffff;
+	letter-spacing: 0.36px;
+	margin-top: -100px;
+}
+.number::before {
+	content: "";
+	width: 100px;
+	height: 7px;
+	background-color: #ffffff;
+	position: absolute;
+	right: 405px;
+	top: 60px;
+}
 .nav-item-link a {
 	font-family: gilroy;
 	font-weight: 800;
@@ -160,6 +263,9 @@ form .search-btn:active {
 }
 .nav-item-link a:active {
 	color: rgba(0, 0, 0, 0.3);
+}
+.nav-list > li {
+	text-transform: uppercase;
 }
 													/*владения хедера на этом моменте заканчиваются*/
 																		/*начинается мейн контйнер*/

@@ -8,10 +8,11 @@
 </head>
 <body>
 	<header class="main-header">
-		<div class="wrapper-header wrapper">
-			<div class="logo">
+		<div class="logo">
 				<img src="img/logo.png" width="164" height="36" alt="">
 			</div>
+		<div class="wrapper-header wrapper">
+			
 			<h1 class="visually-hidden">Device</h1>
 			<div class="user-menu">	
 				<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
@@ -27,7 +28,7 @@
 				<ul class="nav-list">
 					<li class="nav-item-link">
 						<a class="nav-button" href="#">Каталог товаров<img src="img/plus.svg"></a>
-						<ul class="subnav-list">
+						<ul class="subnav-list visually-hidden">
 							<li class="subnav-item">
 								<a class="subnav-link" href="#">Виртуальная реальность</a>
 							</li>
@@ -63,29 +64,43 @@
 	</header>
 	<main class="container">
 		<div class="promo-slider-wrapper wrapper">
+			<span class="number">01</span>
 			<section class="promo-slides">
 				<div class="promo-slide">
 					<img src="img/slider-1.png" width="384" height="486" alt="Очень большая селфи-палка">
-					<p class="promo-lead">Делай селфи,<br>как Бен Стиллер</p>
-					<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине</p>
-					<p class="promo-desc">Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-					<a href="catalog-item.html" class="promo-link btn">Подробнее</a>
-					<table class="info-table">
-						<tr>
-							<th>Длина палки</th>
-							<td>8,5 м</td>
-						</tr>
-						<tr>
-							<th>Вес палки</th>
-							<td>5 кг</td>
-						</tr>
-						<tr>
-							<th>Материал</th>
-							<td>Карбон</td>
-						</tr>
-					</table>
+					<div class="wrapper-promo">
+						<p class="promo-lead">Делай селфи,<br>как Бен Стиллер!</p>
+						<p class="promo-desc">Самая длинная палка для селфи доступна в нашем магазине</p>
+						<p class="promo-desc">Восемь(Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+						<a href="catalog-item.html" class="promo-link btn">Подробнее</a>
+						<div class="promo-controls"> 
+				<label class="radio-button">
+					<input class="visually-hidden promo-radio-button" type="radio" name="radio-slide" checked tabindex="0">
+				</label>
+				<label class="radio-button">
+					<input class="visually-hidden promo-radio-button" type="radio" name="radio-slide" tabindex="0">
+				</label>
+				<label class="radio-button">
+					<input class="visually-hidden promo-radio-button" type="radio" name="radio-slide" tabindex="0">
+				</label>
+			</div>
+						<table class="info-table">
+							<tr>
+								<th>Длина палки</th>
+								<td>8,5 м</td>
+							</tr>
+							<tr>
+								<th>Вес палки</th>
+								<td>5 кг</td>
+							</tr>
+							<tr>
+								<th>Материал</th>
+								<td>Карбон</td>
+							</tr>
+						</table>
+					</div>
 				</div>
-				<div class="promo-slide">
+				<div class="promo-slide visually-hidden"> <!-- временно скрыл -->
 					<img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
 					<p class="promo-lead">Худеем<br>правильно!</p>
 					<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
@@ -97,7 +112,7 @@
 						</tr>
 					</table>
 				</div>
-				<div class="promo-slide">
+				<div class="promo-slide visually-hidden">  <!-- временно скрыл -->
 					<img src="img/slider-3.png" width="526" height="336" alt="Дрон с  лазерной пушкой, замаскированной под камеру"> 
 					<p class="promo-lead">Порхает как бабочка,<br>жалит как пчела</p>
 					<p class="promo-desc">Это обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
