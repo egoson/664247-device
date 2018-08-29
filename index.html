@@ -63,9 +63,9 @@
 	</header>
 	<main>
 		<div class="promo-slider-wrapper container">
-			<span class="number1">01</span>
 			<section class="promo-slides">
 				<div class="promo-slide">
+					<span class="number1">01</span>
 					<img src="img/slider-1.png" width="384" height="486" alt="Очень большая селфи-палка">
 					<div class="wrapper-promo">
 						<p class="promo-lead">Делай селфи,<br>как Бен Стиллер!</p>
@@ -88,55 +88,41 @@
 				</div>
 				<div class="promo-slide hidden"> <!-- временно скрыл -->
 					<img src="img/slider-2.png" width="345" height="485" alt="Фитнес-браслет">
-					<p class="promo-lead">Худеем<br>правильно!</p>
-					<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
-					<a href="catalog-item.html" class="promo-link btn">Подробнее</a>
-					<table class="info-table">
-						<tr>
-							<th>Без подзарядки</th>
-							<td>48 часов</td>
-						</tr>
-					</table>
+					<div class="wrapper-promo">
+						<p class="promo-lead">Худеем<br>правильно!</p>
+						<p class="promo-desc">Мотивирующие фитнес-браслеты помогут найти в себе силы<br> не пропускать занятия и соблюдать диету.</p>
+						<a href="catalog-item.html" class="promo-link btn">Подробнее</a>
+						<table class="info-table">
+							<tr>
+								<th>Без подзарядки</th>
+								<td>48 часов</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 				<div class="promo-slide hidden">  <!-- временно скрыл -->
 					<img src="img/slider-3.png" width="526" height="336" alt="Дрон с  лазерной пушкой, замаскированной под камеру"> 
-					<p class="promo-lead">Порхает как бабочка,<br>жалит как пчела</p>
-					<p class="promo-desc">Это обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
-					<a href="catalog-item.html" class="promo-link btn">Подробнее</a>
-					<table class="info-table">
-						<tr>
-							<th>Дальность полета</th>
-							<td>800 м</td>
-						</tr>
-						<tr>
-							<th>Радиус поражения</th>
-							<td>50 м</td>
-						</tr>
-					</table>
+					<div class="wrapper-promo">
+						<p class="promo-lead">Порхает как бабочка,<br>жалит как пчела</p>
+						<p class="promo-desc">Это обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
+						<a href="catalog-item.html" class="promo-link btn">Подробнее</a>
+						<table class="info-table">
+							<tr>
+								<th>Дальность полета</th>
+								<td>800 м</td>
+							</tr>
+							<tr>
+								<th>Радиус поражения</th>
+								<td>50 м</td>
+							</tr>
+						</table>
+					</div>
 				</div>
 			</section>
-			<div class="promo-controls"> 
-				<ol class="list">
-					<li>
-						<label class="radio-button">
-							<input class="visually-hidden promo-radio-button" type="radio" name="radio-slide" checked tabindex="0">
-						</label>
-					</li>
-					<li>
-						<label class="radio-button">
-							<input class="visually-hidden promo-radio-button" type="radio" name="radio-slide" tabindex="0">
-						</label>
-					</li>
-					<li>
-						<label class="radio-button">
-							<input class="visually-hidden promo-radio-button" type="radio" name="radio-slide" tabindex="0">
-						</label>
-					</li>
-				</ol>
 			</div>
 		</div>
-		<section class="product-sections container">
-			<div class="product-section-wrapper">
+		<section class="product-sections">
+			<div class="container">
 				<ul class="product-items-section">
 					<li class="product-item">
 						<a href="#">
@@ -211,13 +197,17 @@
 					<img src="img/delivery.svg" width="136" height="164" alt="">
 				</div>
 				<div class="service-slide hidden">
-					<h3>Гарантия</h3>
-					<p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же</p>
+					<div class="text-wrap">
+						<h3>Гарантия</h3>
+						<p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же</p>
+					</div>
 					<img src="img/warranty.svg" width="171" height="" alt="194">
 				</div>
 				<div class="service-slide hidden">
-					<h3>Кредит</h3>
-					<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+					<div class="text-wrap">
+						<h3>Кредит</h3>
+						<p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+					</div>
 					<img src="img/credit.svg" width="156" height="186" alt="">
 				</div>
 			</div>
@@ -335,11 +325,9 @@
 			</div>
 		</div>
 	</footer>
-	<section class="popup-write-us container">
-		<div class="btn-wrapper">
-		<button type="button" class="modal-close close-form" aria-label="Закрыть модальное окно"></button>
-		</div>
+	<section class="popup-write-us container ">
 		<form class="modal-form container-modal" action="https://echo.htmlacademy.ru" method="post">
+			<button type="button" class="modal-close close-form" aria-label="Закрыть модальное окно"></button>
 			<div class="label-wrap">
 				<div class="label-wrap-inner">
 					<label for="name">Ваше имя:</label>
@@ -355,7 +343,7 @@
 			<button class="popup-write-us-button button btn" type="submit" aria-label="Отправить">Отправить</button>
 		</form>
 	</section>
-	<section class="popup-map container">
+	<section class="popup-map container hidden">
 		
 		<h2 class="visually-hidden">Как до нас добраться</h2>
 		<button type="button" class="modal-close close-map" aria-label="Закрыть модальное окно"></button>

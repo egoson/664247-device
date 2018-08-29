@@ -27,6 +27,7 @@
 	font-style: normal;
 }
 body {
+	min-width: 1160px;
 	margin: 0;
 	padding: 0;
 	font-size: 15px;
@@ -115,7 +116,8 @@ body {
 	align-items: center;
 	padding-left: 60px;
 	padding-right: 60px;
-	margin-top: 34px;
+	margin-top: 22px;
+	margin-bottom: 16px
 }
 .main-nav {
 	padding-left: 60px;
@@ -226,7 +228,7 @@ form .search-btn:active {
 }
 .promo-slider-wrapper {
 	
-	background-image: linear-gradient(#f8e296 110px, transparent 60px);
+	background-image: linear-gradient(#f8e296 99px, transparent 60px);
 }
 .promo-slide {
 	box-sizing: border-box;
@@ -235,9 +237,13 @@ form .search-btn:active {
 	display: flex;
 	padding-left: 60px;
 	padding-right: 60px;
-	
+	position: relative;
+	margin-bottom: 90px;
 }
 .promo-slide img {
+	position: relative;
+	left: -46px;
+	top: -11px;
 	display: block;
 	margin: 0 auto;
 }
@@ -248,8 +254,8 @@ form .search-btn:active {
 }
 
 .promo-lead {
-	margin-top: 77px;
-	margin-bottom: 30px
+	margin-top: 67px;
+	margin-bottom: 20px
 }
 .promo-desc {
 	margin-top: 0px;
@@ -259,7 +265,7 @@ form .search-btn:active {
 	margin-top: 50px
 }
 .info-table {
-	margin-top: 60px
+	margin-top: 57px
 }
 .hidden {
 	display: none;
@@ -271,8 +277,8 @@ form .search-btn:active {
 	font-family: gilroy;
 	font-weight: 800;
 	position: absolute;
-	right: -30px;
-	top: 240px;
+	right: 47px;
+	top: -25px;
 	text-decoration: none;
 	font-size: 179px;
 	line-height: 179.2px;
@@ -286,8 +292,8 @@ form .search-btn:active {
 	height: 7px;
 	background-color: #ffffff;
 	position: absolute;
-	right: 410px;
-	top: 60px;
+	right: 412px;
+	top: 51px;
 }
 .nav-item-link a {
 	font-family: gilroy;
@@ -325,7 +331,7 @@ form .search-btn:active {
 	font-size: 47px;
 	line-height: 56px;
 	color: #000000;
-	letter-spacing: 0.17px;
+	letter-spacing: 0.6px;
 }
 .promo-desc {
 	font-family: opensans;
@@ -333,7 +339,7 @@ form .search-btn:active {
 	font-size: 15px;
 	line-height: 30px;
 	color: #000000;
-	letter-spacing: 0.15px;
+	letter-spacing: 0.21px;
 }
 .wrapper-promo .info-table {
 	border-spacing: 0px
@@ -362,7 +368,7 @@ form .search-btn:active {
 																											/*секция продуктов*/
 .product-sections {
 	
-	margin-bottom: 170px
+	margin-bottom: 152px
 }
 .product-items-section {
 	display: flex;
@@ -388,7 +394,7 @@ form .search-btn:active {
 	width: 160px;
 	height: 160px;
 	background-color: rgba(240, 197, 46, 0.5);
-	margin-bottom: 39px
+	margin-bottom: 35px
 }
 .product-item span {
 	display: block;
@@ -405,27 +411,31 @@ form .search-btn:active {
 }
 																													/*сервис*/
 .service-list {
+	width: 280px;
+	flex:none;
+	margin: 0;
 	margin-left: 20px;
-	margin-right: 280px
+	position: relative;
+	margin-right: 100px
 }
-.service {
-	background-color: #e5e5e5;
-	background-image: linear-gradient(#ffffff 25px, transparent 25px);
-	margin-bottom: 80px
-}
-.service::after {
+.service-list::after{
 	content: "";
 	width: 7px;
 	height: 319px;
 	position: absolute;
-	left: 750px;
-	top: 1150px;
+	right: 14px;
+	top: -86px;
 	background-color: #000000
+}
+.service {
+	background-color: #e5e5e5;
+	background-image: linear-gradient(#ffffff 27px, transparent 27px);
+	margin-bottom: 80px
 }
 .wrapper-service {
 
 	display: flex;
-	padding-bottom: 100px;
+	padding-bottom: 132px;
 }
 .wrapper-service ul {
 	margin-top: 10px
@@ -434,14 +444,14 @@ form .search-btn:active {
 	width: 760px;
 }
 .text-wrap {
-	margin-right: 120px
+	margin-right: 130px
 }
 .text-wrap p {
 	width: 430px
 }
 .text-wrap h3 {
 	margin: 0;
-	margin-bottom: 40px
+	margin-bottom: 31px
 }
 .service-slide {
 	display: none;
@@ -449,11 +459,11 @@ form .search-btn:active {
 .service-slide.active {
 	display: flex;
 }
-.delivery-btn {
+.service-list-btn {
 	margin-bottom: 40px;
 }
-.guarantee-btn {
-	margin-bottom: 40px
+.service-list-btn:last-child {
+	margin-bottom: 0px;
 }
 .service-slide h3 {
 	font-family: gilroy;
@@ -461,7 +471,11 @@ form .search-btn:active {
 	font-size: 47px;
 	line-height: 48px;
 	color: #000000;
-	letter-spacing: 0.21px;
+	letter-spacing: 1.1px;
+}
+.service-slide img {
+	position: relative;
+	top: 13px
 }
 .service-slide p {
 	font-family: opensans;
@@ -469,7 +483,7 @@ form .search-btn:active {
 	font-size: 15px;
 	line-height: 30px;
 	color: #464646;
-	letter-spacing: 0.15px;
+	letter-spacing: 0.3px;
 }
 																										/* партнеры пока пусто */
 .partners-list {
@@ -582,16 +596,18 @@ form .search-btn:active {
 	margin-top: 30px
 }
 .popup-write-us {
+	position: relative;
 	width: 991px;
 	margin: 0 auto;
-	box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);;
+	box-shadow: 0px 10px 20px 0px rgba(4, 6, 6, 0.2);
+	padding-top: 44px
 
 }
 
 .container-modal {
 	margin-left: 100px;
 	margin-right: 100px;
-	padding-top: 0px
+	padding-top: 40px;
 
 }
 .label-wrap {
@@ -626,12 +642,12 @@ form .search-btn:active {
 .modal-form input[type="text"],
 .modal-form input[type="email"] {
 	width: 360px;
-	min-height: 50px;
+	height: 50px;
 	padding: 18px 20px;
 	margin-bottom: 40px;
 }
 .modal-form input[type="textarea"] {
-	min-height: 156px;
+	height: 156px;
 	width: 100%;
 	padding: 18px 20px
 }
@@ -659,6 +675,9 @@ form .search-btn:active {
 }
 
 .modal-close {
+	position: absolute;
+	right: 22px;
+	top: 22px;
 	width: 55px;
 	height: 56px;
 	background: url(../img/modal-close.svg) no-repeat;
@@ -670,6 +689,11 @@ form .search-btn:active {
 .container-catalog {
 	width: 1160px;
 	margin: 0 auto;
+	display: flex;
+}
+
+.catalog-row .container-catalog {
+	display: flex;
 }
 .breadcrumbs {
 	display: flex;
@@ -710,39 +734,58 @@ form .search-btn:active {
 																									/*фильтры*/
 .aside-col {
   flex: none;
-  width: 30%;
+  width: 22%;
+  margin-left: 60px;
+  
+
+}
+.catalog-row .aside-col {
+	margin-left: 60px
+}
+
+.container-catalog .aside-col {
+	background-color: #dcdcdc
+}
+.container-catalog .wrapper-sorts {
+	background-color: #ebebeb
+}
+.main-col {
+	background-color: #ffffff
+}
+.catalog-row .aside-col {
+	background-color: #ebebeb;
+}
+.sorting-row {
+  	background-image: linear-gradient(to right, #dcdcdc 0%, #dcdcdc 50%, #ebebeb 50%, #ebebeb 100%);
+}
+.catalog-row {
+	background-image: linear-gradient(to right, #ebebeb 0%, #ebebeb 50%, transparent 50%, transparent 100%);
 }
 .main-col{
   flex: none;
   width: 70%;
 }
-.sorting-row {
-  background-image: linear-gradient(to right, #dcdcdc 0%, #dcdcdc 30%, #ebebeb 30%, #ebebeb 100%);
-}
-.catalog-row {
-	background-image: linear-gradient(to right, #ebebeb 0%, #ebebeb 30%, transparent 30%, transparent 100%);
-}
 .catalog-list {
 	display: flex;
 	width: 760px;
 	flex-wrap: wrap;
+	margin-left: 72px
 
 }
-.catalog-list li:nth-child(2n+1) {
+.catalog-list li {
 	margin-right: 40px
 }
-.container-filter {
-	display: flex;
-	margin-left: 60px
+.catalog-list li:nth-child(even) {
+    margin-right: 0;
 }
-
 .catalog-container {
 	display: flex;
 	margin-left: 60px
 }
 .wrapper-sorts {
 	display: flex;
-	width: 70%
+	width: 70%;
+	padding-left: 72px
 }
 
 .filter-item {
@@ -878,7 +921,7 @@ form .search-btn:active {
 	font-size: 16px;
 	line-height: 24px;
 	color: rgba(0, 0, 0, 0.3);
-	letter-spacing: 0.91;
+	letter-spacing: 0.91px;
 	text-decoration: none;
 }
 .paginator-item a:hover {
