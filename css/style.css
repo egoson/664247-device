@@ -61,7 +61,26 @@ body {
 	margin: 0;
 }
 /* кнопка с желтой полоской по центру */
+a.promo-link {
+	display: inline-block;
+	text-transform: uppercase;
+	padding:0 44px;
+	letter-spacing: 3.7px
+	margin-right:auto;
+}
+.btn::before {
+	content: "";
+	position: absolute;
+	top: 8px;
+	left: 1px;
+	width: 220px;
+	height: 8px;
+	background-color: #f0c52e;
+	z-index: -1
+
+}
 .btn {
+	position: relative;
 	font-family: gilroy;
 	font-weight: 800;
 	padding: 0;
@@ -114,7 +133,9 @@ body {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	padding-left: 60px;
+	flex-wrap: wrap;
+	position: relative;
+	margin-left: 78px;
 	padding-right: 60px;
 	margin-top: 22px;
 	margin-bottom: 16px
@@ -125,11 +146,33 @@ body {
 }
 .user-menu-search {
 	flex: none;
-	width: 500px;
+	width: 496px;
 	margin-right: 40px;
 }
+.login-btn img {
+	position: relative;
+	top:0px;
+	right: 13px
+}
+.compare-btn img {
+	position: relative;
+	top:0px;
+	right: 11px
+}
+.basket-btn img {
+	position: relative;
+	top:0px;
+	right: 10px
+}
+.user-menu-search img {
+	position: relative;
+	right: 14px;
+	top: 3px
+
+}
+
 .basket-btn {
-	margin-left: 40px
+	margin-left: 50px
 }
 .user-menu-block {
 	margin-right: auto;
@@ -157,6 +200,11 @@ body {
 .nav-item-link:nth-child(2),
 .nav-item-link:nth-child(3) {
 	margin-right: 34px;
+}
+.nav-button img {
+	position: relative;
+	right: -12px;
+	top: 3px
 }
 ul .nav-list {
 
@@ -251,6 +299,7 @@ form .search-btn:active {
 	width: 500px;
 	display: flex;
 	flex-direction: column;
+	align-self: flex-start;
 }
 
 .promo-lead {
@@ -262,7 +311,7 @@ form .search-btn:active {
 	margin-bottom: 0
 }
 .wrapper-promo .btn {
-	margin-top: 50px
+	margin-top: 51px
 }
 .info-table {
 	margin-top: 57px
@@ -296,6 +345,7 @@ form .search-btn:active {
 	top: 51px;
 }
 .nav-item-link a {
+	position: relative;
 	font-family: gilroy;
 	font-weight: 800;
 	text-decoration: none;
@@ -339,7 +389,7 @@ form .search-btn:active {
 	font-size: 15px;
 	line-height: 30px;
 	color: #000000;
-	letter-spacing: 0.21px;
+	letter-spacing: 0.15px;
 }
 .wrapper-promo .info-table {
 	border-spacing: 0px
