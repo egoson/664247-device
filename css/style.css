@@ -73,10 +73,16 @@ a.promo-link {
 	position: absolute;
 	top: 8px;
 	left: 1px;
-	width: 100%;
+	width: 98%;
 	height: 8px;
 	background-color: #f0c52e;
-	
+}
+.btn:hover::before {
+	height: 40px;
+	top: -9px
+}
+.btn:active {
+	color: rgba(0, 0, 0, 0.3);
 }
 .btn-decor {
 	position: relative;
@@ -114,7 +120,7 @@ a.promo-link {
 .main-header {
 	width: 1160px;
 	margin: 0 auto;
-	margin-top: 40px;
+	margin-top: 22px;
 	
 }
 .container {
@@ -133,8 +139,9 @@ a.promo-link {
 	margin-bottom: 37px
 }
 .logo {
-	margin-bottom: -28px;
+	margin-bottom: -18px;
 	margin-left: 60px;
+	line-height: 0
 	
 }
 .user-menu {
@@ -237,8 +244,11 @@ form .search-btn {
 }
 .user-menu input[type="search"] {
 	opacity: 0.3;
+	padding-bottom: 0;
+	border-top: 0;
+	padding-right: 0;
 	padding-left: 39px;
-	width: 355px
+	width: 355px;
 }
 .user-menu input[type="search"]:hover {
 	opacity: 0.6;
@@ -249,9 +259,16 @@ form .search-btn {
 	border-bottom: 2px solid black;
 	outline: 0;
 	padding-bottom: 0px; 
+
+}
+form .search-btn {
+	border: 2px solid transparent;
+	padding: 8px 20px;
+	opacity: 0
 }
 .user-menu input[type="search"]:focus + .search-btn {
-	border: 2px solid black
+	border: 2px solid black;
+	opacity: 1
 }
 .user-menu-item:hover {
 	opacity: 0.6
@@ -262,17 +279,19 @@ form .search-btn {
 .user-menu-search {
 	display: flex;
 }
-form .search-btn {
-	border: 2px solid transparent;
-	padding: 8px 20px
-}
+
+
 form .search-btn:hover {
 	color: rgba(255, 255, 255, 1);
 	background-color: #000000;
 }
 form .search-btn:active {
 	color: rgba(255, 255, 255, 0.3);
-	background-color: #000000
+	background-color: #000000;
+	opacity: 1
+}
+form .search-btn:active + .search-site {
+	border-bottom: 2px solid black;
 }
 /* блок сетки промо */
 .list {
@@ -307,6 +326,14 @@ form .search-btn:active {
 .image-slide-wrap {
 	max-width: 526px
 }
+.promo-slide:nth-child(3)  img {
+	margin-top: 64px;
+	margin-left: 18px
+}
+.promo-slide:nth-child(3)  .wrapper-promo {
+	position: relative;
+	margin-left: 15px
+}
 .promo-slide {
 	box-sizing: border-box;
 	width: 100%;
@@ -339,7 +366,7 @@ bottom: 148px;
 
   text-align: center;
   font-size: 0;
-  transform: translateX(-50%);
+  right: 40px;
 }
 .control-label {
   position: relative;
@@ -424,9 +451,60 @@ bottom: 148px;
 .info-table {
 	margin-top: 57px
 }
-.hidden {
-	display: none;
+/*position: relative;
+	bottom: 60px;*/
+.subnav-list {
+	position: relative;
+	bottom: 34px;
+	left: 59px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	width: 680px;
+	margin-top: 19px;
+	text-transform: none;
+	margin-left: 2px
 }
+.subnav-list li {
+	width: 220px;
+	margin: 0;
+	z-index: 5;
+}
+.subnav-list li:nth-child(2),
+.subnav-list li:nth-child(5) {
+	box-sizing: border-box;
+	padding-left: 19px
+}
+.subnav-list li:nth-child(5) {
+	width: 420px
+}
+/*	position: absolute;
+	width: 1160px;
+	left: 181px;*/
+.subnav-wrap {
+	opacity: 0;
+	position: absolute;
+	width: 1160px;
+	left: -60px;
+	margin: 0 auto;
+	background-color: #f7e296;
+	padding-top: 32px;
+	z-index: 4
+}
+.subnav-wrap::before:hover ~ .subnav-wrap {
+	opacity: 1
+}
+.nav-item-link .nav-button:hover + .subnav-wrap,
+.nav-item-link li:hover + .subnav-wrap {
+	opacity: 1
+}
+.nav-item-link .nav-button:focus + .subnav-wrap {
+	opacity: 1
+}
+.subnav-list:hover {
+
+}
+
 
 
 																												/*главное меню */
@@ -451,6 +529,9 @@ bottom: 148px;
 	position: absolute;
 	right: 412px;
 	top: 51px;
+}
+.nav-item-link {
+	position: relative;
 }
 .nav-item-link a {
 	position: relative;
@@ -532,6 +613,14 @@ bottom: 148px;
 .info-table td:nth-child(1) {
 	width:158px
 }
+.promo-slide:nth-child(3) th:nth-child(1),
+.promo-slide:nth-child(3) td:nth-child(1) {
+	width: 156px;
+}
+.promo-slide:nth-child(3) tr {
+	width: 303px;
+	display: block;
+}
 .info-table th:nth-child(2),
 .info-table td:nth-child(2) {
 	width:137px
@@ -605,7 +694,7 @@ bottom: 148px;
 }
 																													/*сервис*/
 /*интерактив сервиса*/
-.service-list-btn span:hover  {
+.service-list-btn span:active  {
 	display: block;
 	background-color: black;
 	color: #f7e184;
@@ -625,7 +714,10 @@ bottom: 148px;
 
 }
 .service-list-btn .btn::before{
-	top:18px
+	top:18px;
+}
+.service-list-btn .btn:hover::before{
+	top:0px;
 }
 /* стоп интерактив*/
 .service-list {
@@ -718,8 +810,19 @@ bottom: 148px;
 .partners-list {
 	display: flex;
 	justify-content: space-between;
-	margin-bottom: 134px
+	margin-bottom: 134px;
+
 }
+.hidden-color {
+	opacity: 0;
+	position: absolute;
+}
+
+.partner-link:hover .hidden-color {
+	opacity: 1;
+}
+
+
 																										/*о нас, контакты*/
 .about-us {
 	margin-right: 46px;
@@ -824,6 +927,7 @@ bottom: 148px;
 .user-menu-footer a {
 	margin:0;
 }
+
 .user-menu-footer a:nth-child(1) {
 	margin:0;
 	margin-right: 40px
@@ -913,6 +1017,7 @@ bottom: 148px;
 	margin: auto;
 }
 .logo-footer {
+
 	margin-right: auto;
 }
 .user-menu-footer a {
@@ -1042,6 +1147,7 @@ bottom: 148px;
 }
 ::-moz-placeholder	{ 
 	color: rgba(70, 70, 70, 0.4); 
+
 } /* Firefox 19+ */
 :-moz-placeholder	{ 
 	color: rgba(70, 70, 70, 0.4);
@@ -1551,20 +1657,21 @@ bottom: 148px;
 .catalog-footer .basket-btn {
 	margin-left: 36px
 }
- .catalog-footer a:nth-child(2) {
- 	margin-right: 39px
- }
- .catalog-footer a:nth-child(1) {
- 	margin-right: 15px
- }
- .catalog-footer .html-link img {
- 	margin-right: -17px
+ .catalog-footer a:nth-child(3) {
+ 	margin-right: 0px
  }
  .catalog-footer-nav li {
- 	margin-right: 20px
+ 	margin-right: 35px
  }
+ .catalog-footer .logo-footer {
+ 	margin-right: auto;
+ }
+ .catalog-footer a:nth-child(2) {
+	margin:0;
+	margin-right: 37px
+}
  .catalog-footer-social {
- 	margin-left: 33px;
+ 	margin-left: 37px;
  }
  .catalog-footer-social a {
  	margin: 0;

@@ -17,7 +17,7 @@
 				<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
 					<img class="img-search" src="img/search.svg" width="16" height="16">
 					<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту">
-					<button class="search-btn button" type="submit">Найти</button>
+					<button class="search-btn button " type="submit">Найти</button>
 				</form>
 				<a class="user-menu-item login-btn" href="#"><img src="img/user.svg" width="13" height="12">Войти</a>
 				<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10">Сравнить</a>
@@ -27,26 +27,28 @@
 				<ul class="nav-list">
 					<li class="nav-item-link">
 						<a class="nav-button" href="#">Каталог товаров<img src="img/plus.svg"></a>
-						<ul class="subnav-list hidden">
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Виртуальная реальность</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="catalog.html">Моноподы для селфи</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Экшн-камеры</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Фитнес браслеты</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Умные часы</a>
-							</li>
-							<li class="subnav-item">
-								<a class="subnav-link" href="#">Квадрокоптеры</a>
-							</li>
-						</ul>
+						<div class="subnav-wrap">
+							<ul class="subnav-list">
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Виртуальная реальность</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="catalog.html">Фитнес браслеты</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Квадрокоптеры</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Моноподы для селфи</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Умные часы</a>
+								</li>
+								<li class="subnav-item">
+									<a class="subnav-link" href="#">Экшн-камеры</a>
+								</li>
+							</ul>
+						</div>
 					</li>
 					<li class="nav-item-link">
 						<a class="nav-link" href="#">Доставка</a>
@@ -69,9 +71,9 @@
 		        
 		        <input class="control" type="radio" id="product-3" name="toggle">
 		        <div class="slider-controls">
-		        <label class="control-label slider-controls-item--1" for="product-1"></label>
-		        <label class="control-label slider-controls-item--2" for="product-2"></label>
-		        <label class="control-label slider-controls-item--3" for="product-3"></label>
+			        <label class="control-label slider-controls-item--1" for="product-1"></label>
+			        <label class="control-label slider-controls-item--2" for="product-2"></label>
+			        <label class="control-label slider-controls-item--3" for="product-3"></label>
 		    	</div>
 			<section class="promo-slides">
 				<div class="promo-slide">
@@ -119,17 +121,19 @@
 					<img src="img/slider-3.png" width="526" height="336" alt="Дрон с  лазерной пушкой, замаскированной под камеру">
 					</div> 
 					<div class="wrapper-promo">
-						<p class="promo-lead">Порхает как бабочка, жалит как пчела</p>
-						<p class="promo-desc">Это обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
+						<p class="promo-lead">Порхает как бабочка, жалит как пчела!</p>
+						<p class="promo-desc">Этот обычный, на первый взгляд, квадрокоптер оснащен<br> мощным лазером, замаскированным под стандартную камеру.</p>
 						<a href="catalog-item.html" class="promo-link btn"><span class="btn-decor">Подробнее</span></a>
 						<table class="info-table">
 							<tr>
-								<td>50 м</td>
 								<td>800 м</td>
+								<td>50 м</td>
+								
 							</tr>
 							<tr>
-								<th>Радиус поражения</th>
 								<th>Дальность полета</th>
+								<th>Радиус поражения</th>
+								
 							</tr>
 						</table>
 					</div>
@@ -232,23 +236,31 @@
 			<div class="wrapper-partners">
 				<ul class="partners-list">
 					<li class="partner">
-						<a href="http//www.dji.com">
-							<img class="hidden-colorless" src="img/logo-1-colorless.jpg" width="260" height="100" alt="dji">
+						<a class="partner-link" href="http//www.dji.com">
+							<img class="hidden-color" src="img/logo-1.jpg" width="260" height="100" alt="dji">
+							<img src="img/logo-1-colorless.jpg" width="260" height="100" alt="dji">
 						</a>
 					</li>
 					<li class="partner">
-						<a href="http//www.spgadjets.com">
-							<img src="img/logo-3-colorless.jpg" width="260" height="100" alt="spgadjets">
+						<a class="partner-link" href="http//www.gopro.com">
+							<img class="hidden-color" src="img/logo-2.jpg" width="260" height="100" alt="gopro">
+							<img  src="img/logo-3-colorless.jpg" width="260" height="100" alt="gopro">
+							
 						</a>
 					</li>
 					<li class="partner">
-						<a href="http//www.gopro.com">
-							<img src="img/logo-2-colorless.jpg" width="260" height="100" alt="gopro">
+						<a class="partner-link" href="http//www.spgadjets.com">
+							<img class="hidden-color" src="img/logo-3.jpg" width="260" height="100" alt="spgadjets">
+							<img  src="img/logo-2-colorless.jpg" width="260" height="100" alt="spgadjets">
+							
 						</a>
 					</li>
+					
 					<li class="partner">
-						<a href="http//www.vive.com">
-							<img src="img/logo-4-colorless.jpg" width="260" height="100" alt="vive">
+						<a class="partner-link" href="http//www.vive.com">
+							<img class="hidden-color" src="img/logo-4.jpg" width="260" height="100" alt="vive">
+							<img  src="img/logo-4-colorless.jpg" width="260" height="100" alt="vive">
+							
 						</a>
 					</li>
 				</ul>
