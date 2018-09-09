@@ -1,11 +1,29 @@
 var link = document.querySelector(".write-btn");
 var popup = document.querySelector(".popup-write-us");
 var close = document.querySelector(".modal-close");
-var name = document.querySelector("[name=name]");
+var username = document.querySelector("[name=name]");
 var form = popup.querySelector("form");
 var eMail = popup.querySelector("[name=e-mail]");
 var isStorageSupport = true;
 var storage = "";
+var service = document.querySelector(".service-slide");
+var controls = Array.from(document.querySelectorAll('.service-list-btn'));
+  var slides = Array.from(document.querySelectorAll('.service-slide'));
+
+  for (var i = 0; i < controls.length; i++) {
+    controls[i].addEventListener('click', function(e) {
+      controls.forEach(function(el) {
+        el.classList.remove('active');
+      });
+      var currentEl = e.target.closest('.service-list-btn');
+      currentEl.classList.add('active');
+      var controlIndex = controls.indexOf(currentEl);
+      slides.forEach(function(el) {
+        el.classList.remove('active');
+      });
+      slides[controlIndex].classList.add('active');
+    })
+  }
  try {
     storage = localStorage.getItem("login");
   } catch (err) {
@@ -16,10 +34,10 @@ link.addEventListener("click", function (evt) {
 	evt.preventDefault();
 	popup.classList.add("modal-show");
 	if (storage) {
-      login.value = storage;
-      password.focus();
+      username.value = storage;
+      eMail.focus();
     } else {
-      login.focus();
+      username.focus();
     }
 });
 close.addEventListener("click", function (evt) {
@@ -28,14 +46,14 @@ close.addEventListener("click", function (evt) {
 	popup.classList.remove("modal-error");
 });
 form.addEventListener("submit", function (evt) {
-    if (!name.value || !eMail.value) {
+    if (!username.value || !eMail.value) {
       evt.preventDefault();
       popup.classList.remove("modal-error");
       popup.offsetWidth = popup.offsetWidth;
       popup.classList.add("modal-error");
     } else {
       if (isStorageSupport) {
-        localStorage.setItem("login", login.value);
+        localStorage.setItem("login", username.value);
       }
     }
   });
@@ -48,7 +66,7 @@ window.addEventListener("keydown", function (evt) {
       }
     }
   });
- var mapLink = document.querySelector(".popup-map");
+ var mapLink = document.querySelector(".map-link");
 
   var mapPopup = document.querySelector(".popup-map");
   var mapClose = mapPopup.querySelector(".modal-close");
@@ -64,10 +82,13 @@ window.addEventListener("keydown", function (evt) {
   });
 
   window.addEventListener("keydown", function (evt) {
-    evt.preventDefault();
+    
     if (evt.keyCode === 27) {
+    	evt.preventDefault();
       if (mapPopup.classList.contains("modal-show")) {
         mapPopup.classList.remove("modal-show");
+
+
       }
     }
-  });
+      });

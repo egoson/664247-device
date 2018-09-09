@@ -15,18 +15,18 @@
 			<h1 class="visually-hidden">Device</h1>
 			<div class="user-menu">	
 				<form class="user-menu-search" action="https://echo.htmlacademy.ru" method="post">
-					<img class="img-search" src="img/search.svg" width="16" height="16">
+					<img class="img-search" src="img/search.svg" width="16" height="16" alt="Поиск">
 					<input class="search-site" type="search" name="search-site" placeholder="Поиск по сайту">
 					<button class="search-btn button " type="submit">Найти</button>
 				</form>
-				<a class="user-menu-item login-btn" href="#"><img src="img/user.svg" width="13" height="12">Войти</a>
-				<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10">Сравнить</a>
-				<a class="user-menu-item basket-btn" href="#"><img src="img/cart.svg" width="12" height="12">Корзина</a>
+				<a class="user-menu-item login-btn" href="#"><img src="img/user.svg" width="13" height="12" alt="Войти">Войти</a>
+				<a class="user-menu-item compare-btn" href="#"><img src="img/compare.svg" width="10" height="10" alt="Сравнить">Сравнить</a>
+				<a class="user-menu-item basket-btn" href="#"><img src="img/cart.svg" width="12" height="12" alt="Корзина">Корзина</a>
 			</div>
 			<nav class="main-nav">
 				<ul class="nav-list">
 					<li class="nav-item-link">
-						<a class="nav-button" href="#">Каталог товаров<img src="img/plus.svg"></a>
+						<a class="nav-button" href="#">Каталог товаров<img src="img/plus.svg" alt="Каталог товаров"></a>
 						<div class="subnav-wrap">
 							<ul class="subnav-list">
 								<li class="subnav-item">
@@ -67,14 +67,14 @@
 		<div class="promo-slider-wrapper container">
 				<input class="control" type="radio" id="product-1" name="toggle" checked>
 				
-		        <input class="control" type="radio" id="product-2" name="toggle">
-		        
-		        <input class="control" type="radio" id="product-3" name="toggle">
-		        <div class="slider-controls">
-			        <label class="control-label slider-controls-item--1" for="product-1"></label>
-			        <label class="control-label slider-controls-item--2" for="product-2"></label>
-			        <label class="control-label slider-controls-item--3" for="product-3"></label>
-		    	</div>
+				<input class="control" type="radio" id="product-2" name="toggle">
+				
+				<input class="control" type="radio" id="product-3" name="toggle">
+				<div class="slider-controls">
+					<label class="control-label slider-controls-item--1" for="product-1"></label>
+					<label class="control-label slider-controls-item--2" for="product-2"></label>
+					<label class="control-label slider-controls-item--3" for="product-3"></label>
+				</div>
 			<section class="promo-slides">
 				<div class="promo-slide">
 					<span class="number1">01</span>
@@ -139,7 +139,6 @@
 					</div>
 				</div>
 			</section>
-			</div>
 		</div>
 		<section class="product-sections">
 			<div class="container">
@@ -157,7 +156,7 @@
 							<div class="product-icon-wrapper monopod">
 								<img src="img/popular-2.svg" width="86" height="117" alt="Моноподы для селфи">
 							</div>
-							<span>Моноподы для&nbspселфи</span>
+							<span>Моноподы для&nbsp;селфи</span>
 						</a>
 					</li>
 					<li class="product-item">
@@ -200,7 +199,7 @@
 			<div class="wrapper-service container">
 				<ul class="service-list">
 					<li class="service-list-btn delivery-btn">
-						<button type="button" class="btn" ><span class="btn-decor">Доставка</span></button>
+						<button type="button" class="btn"><span class="btn-decor">Доставка</span></button>
 					</li>
 					<li class="service-list-btn guarantee-btn">
 						<button type="button" class="btn"><span class="btn-decor">Гарантия</span></button>
@@ -221,7 +220,7 @@
 						<h3>Гарантия</h3>
 						<p>Если из-за возгарания купленного у нас товара у вас сгорит дом - не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же</p>
 					</div>
-					<img src="img/warranty.svg" width="171" height="" alt="194">
+					<img src="img/warranty.svg" width="171" height="194" alt="194">
 				</div>
 				<div class="service-slide hidden">
 					<div class="text-wrap">
@@ -291,7 +290,7 @@
 					<div class="wrapper-contacts">
 						<h3>Контакты</h3>
 						<p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-						<div class="map">
+						<div class="map map-link">
 							<a href="https://www.google.ru/maps/place/ул.+Строителей,+15,+Зеленогорск,+Санкт-Петербург,+197720/@60.2060979,29.6800057,17z/data=!3m1!4b1!4m5!3m4!1s0x469654e1c2add12b:0x9aec714d5269991a!8m2!3d60.2060979!4d29.6821944">
 								<img src="img/map.jpg" width="560" height="222" alt="Адрес офиса:ул.Строителей дом 15">
 							</a>
@@ -300,6 +299,7 @@
 					</div>
 				</section>
 		</div>
+	</div>
 	</main>
 	<footer class="wrapper-footer">
 		<div class="container">
@@ -370,15 +370,16 @@
 			<button class="btn" type="submit" aria-label="Отправить"><span class="btn-decor">Отправить</span></button>
 		</form>
 	</section>
-
+	
 	<section class="popup-map button-map">
 		
 		<h2 class="visually-hidden">Как до нас добраться</h2>
 		<button type="button" class="modal-close close-map" aria-label="Закрыть модальное окно"></button>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="766" height="560" allowfullscreen></iframe>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1982.4818219711892!2d29.68180816056584!3d60.2058579878411!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x469654e1c2add12b%3A0x9aec714d5269991a!2z0YPQuy4g0KHRgtGA0L7QuNGC0LXQu9C10LksIDE1LCDQl9C10LvQtdC90L7Qs9C-0YDRgdC6LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTk3NzIw!5e0!3m2!1sru!2sru!4v1536469953448" width="960" height="559" style="border:0" allowfullscreen></iframe>
 		<p><img src="img/map-big.jpg" width="957" height="561" alt="Адрес офиса:ул.Строителей дом 15"></p>
 		
 	</section>
+	
 <script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>
