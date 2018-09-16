@@ -668,7 +668,7 @@ a.promo-link {
 }
 																											/*секция продуктов*/
 .product-sections {
-	margin-bottom: 153px;
+	margin-bottom: 133px;
 }
 .product-items-section {
 	display: -webkit-box;
@@ -709,6 +709,7 @@ a.promo-link {
 }
 .product-item span {
 	display: block;
+	margin-bottom: 20px;
 }
 .monopod img {
 	margin-top: 40px;
@@ -889,9 +890,12 @@ a:focus .product-icon-wrapper {
 .about-us {
 	margin-right: 46px;
 	padding-right: 75px;
+	width: 478px;
+	flex:none;
 }
 .contacts {
-	max-width: 560px
+	flex: none;
+	width: 560px;
 }
 .about-us h3::before,
 .contacts h3::before {
@@ -988,8 +992,8 @@ a:focus .product-icon-wrapper {
 																					/*кончился мейн контейнер*/
 																					/*футер*/
 .user-menu-footer {
-	display: inline-block;
-	vertical-align: middle;
+	display: flex;
+	align-items: center;
 	margin: 0;
 	margin-top: -18px;
 }
@@ -998,11 +1002,11 @@ a:focus .product-icon-wrapper {
 }
 .user-menu-footer .login-btn {
 	margin:0;
-	margin-right: 40px;
+	margin-right: 46px;
 }
 .user-menu-footer .compare-btn {
 	margin:0;
-	margin-right: 36px;
+	margin-right: 40px;
 }
 .user-menu-footer .basket-btn {
 	margin:0;
@@ -1752,9 +1756,9 @@ a:focus .product-icon-wrapper {
 	padding: 0;
 	margin-bottom: 31px;
 }
-.filter-item:first-child {;
+.filter-item:first-child {
 	margin-top: 59px;
-	margin-bottom: 34px
+	margin-bottom: 34px;
 }
 .aside-col form {
 	width: 201px;
@@ -2037,10 +2041,10 @@ font-family: gilroy, Arial, Helvetica, sans-serif;
 }
 													/* футер */
 .catalog-footer .basket-btn {
-	margin-left: 36px;
+	margin-left: 38px;
 }
  .catalog-footer .log-name {
-	margin-right: 15px;
+	margin-right: 19px;
  }
  .catalog-footer-nav li {
 	margin-right: 35px;
@@ -2050,7 +2054,7 @@ font-family: gilroy, Arial, Helvetica, sans-serif;
  }
  .catalog-footer .log-out-btn {
 	margin:0;
-	margin-right: 41px;
+	margin-right: 45px;
 	opacity: 0.3
 }
 .catalog-compare-btn {
